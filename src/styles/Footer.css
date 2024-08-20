@@ -1,0 +1,84 @@
+.foot{
+    width: 100%;
+    position: relative;
+    height: 675px;
+}
+
+.foot.light-mode{
+    background-image: url("../assets/beach-waves.gif");
+}
+
+.foot.dark-mode{
+    background-image: url("../assets/beach-waves-night.gif");
+}
+
+.foot{
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.contact{
+    /* position: absolute; */
+    width: 100%;
+    height: auto;
+}
+
+.contact li{
+    width: 10px;
+    height: 10px;
+    background-color: blue;
+}
+
+
+
+@media (min-width:375px) {
+    .foot{
+        max-width: 375px ;
+        height: 130px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: background-image 0.5s;
+    }
+
+    .contact{
+    }
+}
+
+@media (min-width:768px) {
+    .foot{
+        max-width: 768px ;
+        height: 270px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: background-image 0.5s;
+    }
+
+    .contact{
+    }
+}
+
+@media (min-width:1280px) {
+    .foot{
+        max-width: 1280px ;
+        height: 450px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: background-image 0.5s;
+    }
+
+    .contact{
+    }
+}
+
+@media (min-width:1920px) {
+    .foot{
+        max-width: 1920px ;
+        height: 675px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: background-image 0.5s;
+    }
+
+    .contact{
+    }
+}

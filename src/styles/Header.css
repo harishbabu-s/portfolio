@@ -1,0 +1,380 @@
+.header{
+    display: flex;
+    width: 100%;
+    padding: clamp(10px,1vw,30px);
+    box-sizing: border-box;
+    background-size: cover;
+    aspect-ratio: 1.5;
+    position: relative;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s;
+}
+
+.header.light-mode{
+    background-image: url('../assets/valley-sky-day.jpg');
+
+    .info{
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    
+    .name{
+        color: #03131b;
+    }
+    
+    .info p1, p2{
+        color: #1c213b;
+    }
+
+
+}
+
+.header.dark-mode{
+    background-image: url('../assets/valley-sky-night.jpg');
+    
+    .info{
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .name{
+        color: #92cdf9;
+    }
+    
+    .info p1, p2{
+        color: #83bfd1;
+    }
+
+}
+
+  
+  .nav-menu {
+    display: flex;
+    position: absolute;
+    background-color: #ffffff40;
+    align-content: center;
+   
+    }
+        .nav-menu ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        .nav-menu li {
+            text-shadow: -2px 2px 4px #000000;
+        }
+
+        .nav-menu a {
+            color: #eeeeee;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+  .sun-moon{
+    position: absolute;
+  }
+  
+  .image-container {
+      display: flex;
+      position: absolute;
+      aspect-ratio: 3/4;
+      height: auto; 
+    }
+    
+    .image-container img{
+        object-fit: cover;
+        max-width: 100%;
+        width: auto;
+        height: auto;  
+    }
+    
+    .info{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        align-self: center;
+        align-items: center;
+
+    }
+        .name{
+            font-family: Arial;
+            line-height: 0;
+        }
+
+        .info p1, p2{ 
+            font-family: 'Calibri';
+            text-align: center;
+        }
+
+  
+/*----------------------------------------------------------------------*/
+@media (min-width:375px) {
+
+    .header{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-menu {
+        border-radius: 10px;
+        width: max-content;
+        height: 30px;
+        top: 10px;
+        align-content: center;
+        justify-content: center;
+    }
+      
+    .nav-menu ul {
+        margin: 0;
+        padding: 5px 15px 0 15px;
+        gap: 15px
+    }
+    
+    .nav-menu li {
+        font-size: 16px;
+    }
+
+    uHI , cHI{
+        font-size: 14px;
+    }
+
+
+    .image-container{
+        align-self: center;
+        top: 70px;
+        left: 50px;
+        width: 70px;
+    }
+    .image-container img{
+        border-radius: 10px;
+    }
+
+    .info{
+        padding: 10px 5px 10px 45px;
+        top: 55px;
+        left: 80px;
+        height: 100px;
+        width: 230px;
+        border-radius: 8px;
+    }
+
+    .name{
+            font-size: 1.2rem;
+            
+            h2{
+                margin: 20px 0 30px 0 ;
+            }
+        }
+        
+        .info p1{
+            font-size: 15px;
+        }
+        .info p2{
+            font-size: 12px;
+        }
+
+        .sun-moon{
+        width: 60px;
+        height: 60px;
+        top: 30px;
+        left: 5px;
+        }   
+}
+
+@media (min-width:768px) {
+  /* max-width: 768px ; */
+
+    .nav-menu {
+        border-radius: 12px;
+        width: 500px;
+        height: 45px;
+        top: 10px;
+        right: 7px;
+    }
+    
+    .nav-menu ul {
+        margin: 0;
+        padding: 8px 25px 0 25px;
+        gap: 25px
+    }
+
+    .nav-menu li {
+        font-size: 22px;
+    }
+
+    uHI , cHI{
+        font-size: 20px;
+    }
+
+
+    .image-container{
+        top: 120px;
+        left: 100px;
+        width: 150px;
+    }
+    .image-container img{
+        border-radius: 20px;
+    }
+
+    .info{
+        padding: 15px 5px 5px 90px;
+        top: 75px;
+        left: 160px;
+        height: 260px;
+        width: 480px;
+        border-radius: 10px;
+    }
+
+        .name{
+            font-size: 40px;
+            
+            h2{
+                margin: 65px 0 50px 0 ;
+            }
+        }
+    
+        .info p1{
+            font-size: 30px;
+        }
+        .info p2{
+            font-size: 26px;
+        }
+
+        .sun-moon{
+        width: 120px;
+        height:120px;
+        top: 30px;
+        left: 5px;
+        }   
+
+}
+
+@media (min-width:1280px) {
+  /* max-width: 1280px ; */
+
+    .nav-menu {
+        border-radius: 18px;
+        width: 600px;
+        height: 60px;
+        top: 10px;
+        right: 7px;
+    }
+      
+    .nav-menu ul {
+        margin: 0;
+        padding: 8px 25px 0 25px;;
+        gap: 25px
+    }
+
+    .nav-menu li {
+        font-size: 1.7rem;
+    }
+
+    uHI , cHI{
+        font-size: 1.25rem;
+    }
+
+    .image-container{
+        top: 200px;
+        left: 180px;
+        width: 250px;
+    }
+    .image-container img{
+        border-radius: 35px;
+    }
+
+    .info{
+        padding: 15px 5px 5px 140px;
+        top: 150px;
+        left: 300px;
+        height: 400px;
+        width: 780px;
+        border-radius: 20px;
+    }
+
+        .name{
+            font-size: 64px;
+            
+            h2{
+                margin: 100px 0 90px 0 ;
+            }
+        }
+    
+        .info p1{
+            font-size: 48px;
+        }
+        .info p2{
+            font-size: 44px;
+        }
+
+        .sun-moon{
+        width: 200px;
+        height:200px;
+        top: 50px;
+        left: 10px;
+        }
+}
+
+@media (min-width:1920px) {
+    /* max-width: 1920px ; */
+    .nav-menu {
+        border-radius: 20px;
+        width: 740px;
+        height: 70px;
+        top: 12px;
+        right: 10px;
+    }
+      
+    .nav-menu ul {
+        margin: 0;
+        padding: 10px 30px 0 30px;
+        gap: 30px
+    }
+    
+    .nav-menu li {
+        font-size: 2rem;
+    }
+
+    uHI , cHI{
+        font-size: 1.52rem;
+    }
+
+
+    .image-container{
+        top: 300px;
+        left: 240px;
+        width: 330px;
+    }
+    .image-container img{
+        border-radius: 50px;
+    }
+
+    .info{
+        padding: 44px 5px 5px 180px;
+        top: 220px;
+        left: 400px;
+        height: 550px;
+        width: 1200px;
+        border-radius: 30px;
+    }
+
+        .name{
+            font-size: 80px;
+            
+            h2{
+                margin: 120px 0 120px 0 ;
+            }
+        }
+    
+        .info p1{
+            font-size: 64px;
+        }
+        .info p2{
+            font-size: 56px;
+        }
+
+        .sun-moon{
+        width: 250px;
+        height:250px;
+        top: 100px;
+        left: 25px;
+        }
+}

@@ -1,0 +1,215 @@
+.main-body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.main-body.light-mode{
+
+    .timeline{
+        background-image: url('../assets/valley-day.jpg');
+    }
+    
+        .bspe{
+            background-image: url('../assets//train-bspe.png');
+        }
+
+        .it{
+            background-image: url('../assets/train-it.png');
+        }
+
+        .new{
+            background-image: url('../assets/train-new.png');
+        }
+
+    .timeline-details{
+        background-image: url("../assets/grass-and-sand.png");
+    }
+    .mobile-helper{
+       background-image: linear-gradient(#00460a, #788940);;
+    }
+}
+
+
+.main-body.dark-mode{
+    
+    .timeline{
+        background-image: url('../assets/valley-night.jpg');
+    }
+        .bspe{
+            background-image: url('../assets//train-bspe-night.png');
+        }
+        
+        .it{
+            background-image: url('../assets/train-it-night.png');
+        }
+        
+        .new{
+            background-image: url('../assets/train-new-night.png');
+        }
+    
+        .timeline-details{
+            background-image: url("../assets/grass-and-sand-night.jpg");
+        }
+    .mobile-helper{
+        background-image: linear-gradient(#000f01, #425324);;
+    }
+}
+
+.timeline{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 960px;
+}
+.train{
+    display: flex;
+    flex-direction: row;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    justify-content: center;
+    height: 880px;
+        }
+            .window{
+                display: block;
+                width: 200px;
+                height: 200px;
+                background-color: #e6e6e6;
+                border-color: #2b2b2b;
+                border-radius: 2px;
+                position: relative;
+                cursor: pointer;
+            }
+
+
+
+        .main-body.light-mode.bspe{
+        }
+        .main-body.dark-mode.bspe{
+        }
+
+            .window{
+                border-radius: 30px;
+                border-color: #000000;
+                border-width: 50px;
+                text-align: center;
+                
+            }
+
+            .born {
+            }
+
+            .school {
+            }
+
+            .puc {
+            }
+
+            .engg{
+            }
+
+     
+            .infy{
+            }
+
+            .trs{
+            }
+      
+      
+            .next{
+                top: 40%;
+                left: 40px;
+            }
+
+.timeline-details{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+
+
+
+
+@media (min-width:375px) {
+    .mobile-helper{
+        display: flex;
+        width: 375px;
+        height: 300px;
+    }
+    
+
+    .timeline, .timeline-details{
+        max-width: 375px ;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: background-image 0.5s;
+    }
+    .timeline{
+        height: 187px;
+    }
+    .timeline-details{
+        height: 375px;
+    }
+}
+
+@media (min-width:768px) {
+    .mobile-helper{
+        display: none;
+    }
+    .timeline, .timeline-details{
+        max-width: 768px ;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: background-image 0.5s;
+    }
+    .timeline{
+        height: 384px;
+    }
+    .timeline-details{
+        height: 768px;
+    }
+}
+
+@media (min-width:1280px) {
+    .mobile-helper{
+        display: none;
+    }
+    .timeline, .timeline-details{
+        max-width: 1280px ;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: background-image 0.5s;
+    }
+    .timeline{
+        height: 640px;
+    }
+    .timeline-details{
+        height: 1280px;
+    }
+}
+
+@media (min-width:1920px) {
+    .mobile-helper{
+        display: none;
+    }
+    .timeline, .timeline-details{
+        max-width: 1920px ;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: background-image 0.5s;
+    }
+    .timeline{
+        height: 960px;
+    }
+    .timeline-details{
+        height: 1920px;
+    }
+}
