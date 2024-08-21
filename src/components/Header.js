@@ -4,6 +4,7 @@ import Switch from "react-switch";
 import "../styles/Header.css";
 import { useTheme } from "../utils/ToggleTheme";
 import photo from "../assets/Harish.jpg";
+import photoDark from "../assets/Harish-Dark.jpg";
 import sun from "../assets/sun.png";
 import moon from "../assets/moon.png";
 
@@ -61,14 +62,21 @@ const Header = ({ Width }) => {
           <b>Front-End Mobile|Web developer</b>
         </p1>
         <p2>
-          Aspiring to be <strong>Full stack developer</strong>
+          Aspiring to be{" "}
+          <asp>
+            <strong>Full stack developer</strong>
+          </asp>
           <br />
-          Also was a <strong>Test Automation Engineer</strong>
+          Also was a <b>Test Automation Engineer</b>
         </p2>
       </div>
 
       <div className="image-container">
-        <img src={photo} width={300} alt="MyPhoto,notYours" />
+        <img
+          src={darkMode ? photoDark : photo}
+          width={300}
+          alt="MyPhoto,notYours"
+        />
       </div>
     </header>
   );

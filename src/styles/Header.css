@@ -17,12 +17,15 @@
         background-color: rgba(0, 0, 0, 0.1);
     }
     
-    .name{
+    .name, .info p2 asp{
         color: #03131b;
     }
     
-    .info p1, p2{
-        color: #1c213b;
+    .info p1{
+        color: #242da8;
+    }
+    .info p2{
+        color: #1d3085;
     }
 
 
@@ -35,12 +38,15 @@
         background-color: rgba(255, 255, 255, 0.1);
     }
 
-    .name{
-        color: #92cdf9;
+    .name, .info p2 asp{
+        color: #0080d2;
     }
     
-    .info p1, p2{
-        color: #83bfd1;
+    .info p1{
+        color: #3facdf;
+    }
+    .info p2{
+        color: #85c5e4;
     }
 
 }
