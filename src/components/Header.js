@@ -27,7 +27,7 @@ const Header = ({ Width }) => {
             <a href="#about">Timeline</a>
           </li>
           <li>
-            <a href="#timeline">Projects</a>
+            <a href="#timeline">Timeline</a>
           </li>
           <li>
             <a href="#contact">Contact</a>
@@ -63,7 +63,7 @@ const Header = ({ Width }) => {
         <p2>
           Aspiring to be <strong>Full stack developer</strong>
           <br />
-          Also was a <b>Test Automation Engineer</b>
+          Also was a <strong>Test Automation Engineer</strong>
         </p2>
       </div>
 

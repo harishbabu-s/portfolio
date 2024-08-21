@@ -2,83 +2,163 @@
     width: 100%;
     position: relative;
     height: 675px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s;
 }
 
 .foot.light-mode{
     background-image: url("../assets/beach-waves.gif");
-}
 
+    .contact{
+        color: #000;
+    }
+    .navTitle{
+            color: #000;
+        }
+    }
+    
 .foot.dark-mode{
     background-image: url("../assets/beach-waves-night.gif");
+
+    .contact{
+        color: #fff;
+    }
+    .navTitle{
+        color: #fff;
+        }
 }
 
-.foot{
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+    .contact{
+        text-align: center;
+    }
 
-.contact{
-    /* position: absolute; */
-    width: 100%;
-    height: auto;
-}
+        .navList {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        }
 
-.contact li{
-    width: 10px;
-    height: 10px;
-    background-color: blue;
-}
+                .navLink {
+                    display: flex;
+                    text-decoration: none;
+                    flex-direction: column;
+                    align-items: center;
+                }
 
+                    .navIcon {
+                    object-fit: contain;
+                    }
 
+                    .navTitle{
+                        font-family: Arial;
+                        font-weight: bold;
+                    }
+
+/*--------------------------------------------------------------------------------------------------*/
 
 @media (min-width:375px) {
     .foot{
         max-width: 375px ;
         height: 130px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        transition: background-image 0.5s;
+    }
+    .contact{
+        font-size: 24px;
+        margin-top: 8px;
+        margin-bottom: 8px;
     }
 
-    .contact{
-    }
+    .navbar{
+        margin-top: 16px;
+        }
+    
+            .navList {
+            padding: 0;
+            margin: 0;
+            }
+
+                        .navIcon {
+                        width: 24px;
+                        height: 24px;
+                        margin: 0 16px 0 16px ;
+                        }
+    
+                        .navTitle {
+                        font-size: 8px;
+                        margin-top: 8px;
+                        }
 }
 
 @media (min-width:768px) {
     .foot{
         max-width: 768px ;
         height: 270px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        transition: background-image 0.5s;
     }
 
     .contact{
+        font-size: 40px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
+
+    .navbar{
+        margin-top: 50px;
+        }
+    
+            .navList {
+            padding: 0;
+            margin: 0;
+            }
+
+                        .navIcon {
+                        width: 50px;
+                        height: 50px;
+                        margin: 0 24px 0 24px ;
+                        }
+    
+                        .navTitle {
+                        font-size: 16px;
+                        margin-top: 10px;
+                        }
 }
 
 @media (min-width:1280px) {
     .foot{
         max-width: 1280px ;
         height: 450px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        transition: background-image 0.5s;
     }
 
     .contact{
+        font-size: 64px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
+
+    .navbar{
+        margin-top: 100px;
+        }
+    
+            .navList {
+            padding: 0;
+            margin: 0;
+            }
+
+                        .navIcon {
+                        width: 100px;
+                        height: 100px;
+                        margin: 0 64px 0 64px;
+                        }
+    
+                        .navTitle {
+                        font-size: 40px;
+                        margin-top: 10px;
+                        }
 }
 
 @media (min-width:1920px) {
     .foot{
         max-width: 1920px ;
         height: 675px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        transition: background-image 0.5s;
     }
 
-    .contact{
-    }
 }
