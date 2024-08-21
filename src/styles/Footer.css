@@ -4,7 +4,7 @@
     height: 675px;
     background-size: cover;
     background-repeat: no-repeat;
-    transition: background-image 0.5s;
+    transition: background-image 1s;
 }
 
 .foot.light-mode{

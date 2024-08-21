@@ -12,7 +12,7 @@
 .main-body.light-mode{
 
     .timeline{
-        background-image: url('../assets/valley-day.jpg');
+        background-image: url('../assets/green-day.jpg');
     }
     
         .bspe{
@@ -28,7 +28,7 @@
         }
 
     .timeline-details{
-        background-image: url("../assets/grass-and-sand.png");
+        background-image: url("../assets/grass-and-sand-day.png");
     }
     .mobile-helper{
        background-image: linear-gradient(#00460a, #788940);;
@@ -39,7 +39,7 @@
 .main-body.dark-mode{
     
     .timeline{
-        background-image: url('../assets/valley-night.jpg');
+        background-image: url('../assets/green-night.jpg');
     }
         .bspe{
             background-image: url('../assets//train-bspe-night.png');
@@ -54,54 +54,54 @@
         }
     
         .timeline-details{
-            background-image: url("../assets/grass-and-sand-night.jpg");
+            background-image: url("../assets/grass-and-sand-night.png");
         }
     .mobile-helper{
         background-image: linear-gradient(#000f01, #425324);;
     }
 }
 
+
 .timeline{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: row; */
     position: relative;
-    width: 100%;
-    height: 960px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image 1s;
+    overflow-x: auto;
 }
+
+.timeline-details{
+    background-size: cover;
+}
+
 .train{
     display: flex;
     flex-direction: row;
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    justify-content: center;
-    height: 880px;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    transition: background-image 1s;
+    /* position: relative; */
+    /* width: 1352px; */
+    justify-content: flex-end;
+    /* width: 1352px;
+    height: 960px; */
         }
             .window{
-                display: block;
-                width: 200px;
-                height: 200px;
-                background-color: #e6e6e6;
-                border-color: #2b2b2b;
-                border-radius: 2px;
-                position: relative;
+                /* display: flex; */
+                /* flex-direction: column; */
+                /* justify-content: space-between; */
+                /* align-items: center; */
+                background-color: #e6e6e690;
+
+                border: solid black ;
+                /* border-width: 20px; */
+                /* position: relative; */
                 cursor: pointer;
-            }
-
-
-
-        .main-body.light-mode.bspe{
-        }
-        .main-body.dark-mode.bspe{
-        }
-
-            .window{
-                border-radius: 30px;
-                border-color: #000000;
-                border-width: 50px;
                 text-align: center;
-                
             }
+
 
             .born {
             }
@@ -128,87 +128,204 @@
                 left: 40px;
             }
 
-.timeline-details{
-    display: flex;
-    flex-direction: row;
-    position: relative;
+
+.projects{
+    height: 100px;
 }
 
 
 
 
-
 @media (min-width:375px) {
-    .mobile-helper{
-        display: flex;
-        width: 375px;
-        height: 300px;
-    }
-    
 
     .timeline, .timeline-details{
         max-width: 375px ;
-        background-size: cover;
-        background-repeat: no-repeat;
-        transition: background-image 0.5s;
     }
-    .timeline{
-        height: 187px;
-    }
+        .timeline, .train{
+            height: 172px;
+        }
+            .bspe{
+                min-width: 263px;
+            }
+            
+            .it{
+                min-width: 109px;
+            }
+            
+            .new{
+                min-width: 54px;
+            }
+                .window{
+                    margin-top: 75px;
+                    margin-right: 6.4px;
+                    border-radius: 5px;
+                    border-width: 0.5px;
+                    width: 39.8px;
+                    height: 35.5px;
+                    font-size: 8px;
+                }
+                    .trs{
+                        margin-right: 7px;
+                        width: 40px;
+                    }
+                    .infy{
+                        margin-right: 13.7px;
+                    }
+                    .engg{
+                        margin-right: 5.4px;
+                    }
+                    .puc, .school{
+                        margin-right: 14px;
+                    }
+                    .born{
+                        margin-right: 56px;
+                        width: 37px;
+                        height: 34.5px;
+                    }
+
     .timeline-details{
         height: 375px;
     }
 }
 
 @media (min-width:768px) {
-    .mobile-helper{
-        display: none;
-    }
+
     .timeline, .timeline-details{
         max-width: 768px ;
-        background-size: contain;
-        background-repeat: no-repeat;
-        transition: background-image 0.5s;
     }
-    .timeline{
-        height: 384px;
-    }
+
+        .timeline, .train{
+            height: 352px;
+        }
+
+        .train{
+            gap: 13.5px;
+        }
+            .bspe{
+                min-width: 541px;
+                }
+
+                .it{
+                    min-width: 223px;
+                }
+
+                .new{
+                    min-width: 112px;
+                }
+                    .window{
+                        margin-top: 153px;
+                        margin-right: 14px;
+                        border-radius: 10px;
+                        border-width: 1px;
+                        width: 82px;
+                        height: 73.5px;
+                    }
+                        .born{
+                            margin-right: 102px;
+                            width: 76px;
+                            height: 72px;
+                        }
+            
     .timeline-details{
         height: 768px;
     }
 }
 
 @media (min-width:1280px) {
-    .mobile-helper{
-        display: none;
-    }
+
     .timeline, .timeline-details{
         max-width: 1280px ;
-        background-size: contain;
-        background-repeat: no-repeat;
-        transition: background-image 0.5s;
     }
-    .timeline{
-        height: 640px;
-    }
+
+        .timeline, .train{
+            height: 587px;
+        }
+
+        .train{
+            gap: 22px;
+        }
+            .bspe{
+                min-width: 902px;
+            }
+
+
+            .it{
+                min-width: 372px;
+            }
+
+            .new{
+                min-width: 187px;
+            }
+
+            
+                .window{
+                    margin-top: 255px;
+                    margin-right: 24px;
+                    border-radius: 15px;
+                    border-width: 1px;
+                    width: 137px;
+                    height: 124px;
+                }
+                    .born{
+                        margin-right: 170px;
+                        width: 128px;
+                        height: 120px;
+                    }
+            
+
+
     .timeline-details{
         height: 1280px;
     }
+
+
 }
 
 @media (min-width:1920px) {
-    .mobile-helper{
-        display: none;
-    }
+
     .timeline, .timeline-details{
         max-width: 1920px ;
-        background-size: cover;
-        background-repeat: no-repeat;
-        transition: background-image 0.5s;
     }
-    .timeline{
-        height: 960px;
-    }
+
+        .timeline, .train{
+            height: 880px;
+        }        
+            .bspe{
+                min-width: 1352px;
+            }
+            
+            .it{
+                min-width: 558px;
+            }
+            
+            .new{
+                min-width: 280px;
+            }
+
+                .window{
+                    margin-top: 384px;
+                    margin-right: 34px;
+                    border-radius: 25px;
+                    border-width: 2px;
+                    width: 208px;
+                    height: 182px;
+                }
+
+                    .infy{
+                        margin-right: 46px;
+                    }
+                    .puc{
+                        margin-right: 44px;
+                    }
+                    .school{
+                        margin-right: 45px;
+                    }
+                    .born{
+                        margin-right: 262px;
+                        width: 192px;
+                    }
+
+
     .timeline-details{
         height: 1920px;
     }

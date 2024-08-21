@@ -7,6 +7,8 @@ import photo from "../assets/Harish.jpg";
 import photoDark from "../assets/Harish-Dark.jpg";
 import sun from "../assets/sun.png";
 import moon from "../assets/moon.png";
+import moonIcon from "../assets/moon-icon.png";
+import icon from "../assets/fonto.ico";
 
 const Header = ({ Width }) => {
   const { darkMode, toggleTheme } = useTheme();
@@ -28,7 +30,7 @@ const Header = ({ Width }) => {
             <a href="#about">Timeline</a>
           </li>
           <li>
-            <a href="#timeline">Timeline</a>
+            <a href="#timeline">Projects</a>
           </li>
           <li>
             <a href="#contact">Contact</a>
@@ -38,6 +40,8 @@ const Header = ({ Width }) => {
             checked={darkMode}
             offColor="#0064d5"
             onColor="#021d2c"
+            onHandleColor="#bbbbbb"
+            offHandleColor="#dddddd"
             uncheckedHandleIcon={<uHI>☀️</uHI>} //☀️ ☀︎
             checkedHandleIcon={<cHI>🌙</cHI>} //🌙 ☾
             checkedIcon={false}
