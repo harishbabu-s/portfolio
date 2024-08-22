@@ -62,17 +62,17 @@ const Header = ({ Width }) => {
         <div className="name">
           <h2>Harishbabu S</h2>
         </div>
-        <p1>
+        <p01>
           <b>Front-End Mobile|Web developer</b>
-        </p1>
-        <p2>
+        </p01>
+        <p02>
           Aspiring to be{" "}
           <asp>
             <strong>Full stack developer</strong>
           </asp>
           <br />
           Also was a <b>Test Automation Engineer</b>
-        </p2>
+        </p02>
       </div>
 
       <div className="image-container">

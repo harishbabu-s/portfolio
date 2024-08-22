@@ -26,12 +26,29 @@
         .new{
             background-image: url('../assets/train-new.png');
         }
+        
+        .window{
+            background-color: #eeeeee70;
+        }
 
+        .window:hover{
+            background-color: #eeeeee;
+        }
+
+        .window p1{
+            color: #03131b;
+        }
+        
+        .window p2{
+            color: #0000ff;
+        } 
+        .window p3{
+            color: black;
+        }
+
+        
     .timeline-details{
-        background-image: url("../assets/grass-and-sand-day.png");
-    }
-    .mobile-helper{
-       background-image: linear-gradient(#00460a, #788940);;
+        background-image: url("../assets/grass-and-sand-night.png");
     }
 }
 
@@ -52,81 +69,87 @@
         .new{
             background-image: url('../assets/train-new-night.png');
         }
+
+        .window{
+            background-color: #33333380;
+        }
+
+        .window:hover{
+            background-color: #555555;
+        }
+
+        .window p1{
+            color: #0080d2;
+        }
+        
+        .window p2{
+            color: #ffffff90;
+        } 
+        .window p3{
+            color: #0478c0;
+        }
     
         .timeline-details{
             background-image: url("../assets/grass-and-sand-night.png");
         }
-    .mobile-helper{
-        background-image: linear-gradient(#000f01, #425324);;
     }
-}
 
 
-.timeline{
-    display: flex;
+    .timeline{
+        display: flex;
     /* flex-direction: row; */
     position: relative;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transition: background-image 1s;
     overflow-x: auto;
+    /* height: 880px; */
 }
 
-.timeline-details{
+.timeline, .timeline-details, .train{
     background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image 2s;
 }
 
 .train{
     display: flex;
     flex-direction: row;
     /* background-repeat: no-repeat; */
-    background-size: cover;
-    transition: background-image 1s;
+    /* background-size: cover; */
+    /* transition: background-image 1s; */
     /* position: relative; */
     /* width: 1352px; */
     justify-content: flex-end;
     /* width: 1352px;
     height: 960px; */
-        }
+    /* height: 880px; */
+}
             .window{
                 /* display: flex; */
                 /* flex-direction: column; */
                 /* justify-content: space-between; */
                 /* align-items: center; */
-                background-color: #e6e6e690;
-
                 border: solid black ;
-                /* border-width: 20px; */
-                /* position: relative; */
                 cursor: pointer;
                 text-align: center;
             }
-
-
-            .born {
+            
+            p1, p2, p3{
+                display: block;
+                font-weight: bold;
+            }
+            
+            .window p1{
+                font-family: 'Times New Roman';
             }
 
-            .school {
+            .window p2{
+                font-family: Times;
             }
 
-            .puc {
+            .window p3{
+                font-family: 'Roboto';
             }
 
-            .engg{
-            }
 
-     
-            .infy{
-            }
-
-            .trs{
-            }
-      
-      
-            .next{
-                top: 40%;
-                left: 40px;
-            }
 
 
 .projects{
@@ -134,53 +157,58 @@
 }
 
 
-
-
 @media (min-width:375px) {
 
     .timeline, .timeline-details{
         max-width: 375px ;
     }
-        .timeline, .train{
-            height: 172px;
-        }
-            .bspe{
-                min-width: 263px;
+
+    .timeline, .train{
+        height: 352px;
+    }
+
+    .train{
+        gap: 13.5px;
+    }
+        .bspe{
+            min-width: 541px;
             }
-            
+
             .it{
-                min-width: 109px;
+                min-width: 223px;
             }
-            
+
             .new{
-                min-width: 54px;
+                min-width: 112px;
             }
                 .window{
-                    margin-top: 75px;
-                    margin-right: 6.4px;
-                    border-radius: 5px;
-                    border-width: 0.5px;
-                    width: 39.8px;
-                    height: 35.5px;
-                    font-size: 8px;
+                    margin-top: 153px;
+                    margin-right: 14px;
+                    border-radius: 10px;
+                    border-width: 1px;
+                    width: 82px;
+                    height: 73.5px;
+                    line-height: 0.8rem;
                 }
-                    .trs{
-                        margin-right: 7px;
-                        width: 40px;
-                    }
-                    .infy{
-                        margin-right: 13.7px;
-                    }
-                    .engg{
-                        margin-right: 5.4px;
-                    }
-                    .puc, .school{
-                        margin-right: 14px;
-                    }
+
+                p1{
+                    margin-top: 4px;
+                    font-size: 16px;
+                    height: 17px;
+                }
+    
+                p2{
+                    font-size: 12px;
+                }
+    
+                p3{
+                    margin-top: 1px;
+                    font-size: 10px;
+                }
                     .born{
-                        margin-right: 56px;
-                        width: 37px;
-                        height: 34.5px;
+                        margin-right: 102px;
+                        width: 76px;
+                        height: 72px;
                     }
 
     .timeline-details{
@@ -188,48 +216,70 @@
     }
 }
 
+
 @media (min-width:768px) {
 
     .timeline, .timeline-details{
         max-width: 768px ;
     }
 
-        .timeline, .train{
-            height: 352px;
+    .timeline, .train{
+        height: 587px;
+    }
+
+    .train{
+        gap: 22px;
+    }
+        .bspe{
+            min-width: 902px;
         }
 
-        .train{
-            gap: 13.5px;
+
+        .it{
+            min-width: 372px;
         }
-            .bspe{
-                min-width: 541px;
-                }
 
-                .it{
-                    min-width: 223px;
-                }
+        .new{
+            min-width: 187px;
+        }
+  
+            .window{
+                margin-top: 255px;
+                margin-right: 24px;
+                border-radius: 15px;
+                border-width: 1px;
+                box-shadow: inset 1px 1px 1px 3px #00000050;
+                width: 137px;
+                height: 124px;
+                line-height: 1.3rem;
+            }
 
-                .new{
-                    min-width: 112px;
-                }
-                    .window{
-                        margin-top: 153px;
-                        margin-right: 14px;
-                        border-radius: 10px;
-                        border-width: 1px;
-                        width: 82px;
-                        height: 73.5px;
-                    }
-                        .born{
-                            margin-right: 102px;
-                            width: 76px;
-                            height: 72px;
-                        }
-            
+            p1{
+                margin-top: 8px;
+                font-size: 26px;
+                height: 28px;
+            }
+
+            p2{
+                font-size: 20px;
+            }
+
+            p3{
+                margin-top: 4px;
+                font-size: 18px;
+            }
+                .born{
+                    margin-right: 170px;
+                    width: 128px;
+                    height: 120px;
+                }                   
+
+                                
     .timeline-details{
         height: 768px;
     }
 }
+
 
 @media (min-width:1280px) {
 
@@ -237,48 +287,11 @@
         max-width: 1280px ;
     }
 
-        .timeline, .train{
-            height: 587px;
-        }
-
-        .train{
-            gap: 22px;
-        }
-            .bspe{
-                min-width: 902px;
-            }
-
-
-            .it{
-                min-width: 372px;
-            }
-
-            .new{
-                min-width: 187px;
-            }
-
-            
-                .window{
-                    margin-top: 255px;
-                    margin-right: 24px;
-                    border-radius: 15px;
-                    border-width: 1px;
-                    width: 137px;
-                    height: 124px;
-                }
-                    .born{
-                        margin-right: 170px;
-                        width: 128px;
-                        height: 120px;
-                    }
-            
-
-
     .timeline-details{
         height: 1280px;
     }
 
-
+    
 }
 
 @media (min-width:1920px) {
@@ -307,9 +320,25 @@
                     margin-right: 34px;
                     border-radius: 25px;
                     border-width: 2px;
+                    box-shadow: inset 1px 1px 1px 3px #00000050;
                     width: 208px;
                     height: 182px;
+                    line-height: 1.8rem;
                 }
+                    p1{
+                        margin-top: 10px;
+                        font-size: 42px;
+                        height: 44px;
+                    }
+
+                    p2{
+                        font-size: 26px;
+                    }
+
+                    p3{
+                        margin-top: 8px;
+                        font-size: 24px;
+                    }
 
                     .infy{
                         margin-right: 46px;

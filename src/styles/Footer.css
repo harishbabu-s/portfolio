@@ -10,23 +10,18 @@
 .foot.light-mode{
     background-image: url("../assets/beach-waves.gif");
 
-    .contact{
+    .contact, .navTitle{
         color: #000;
     }
-    .navTitle{
-            color: #000;
-        }
-    }
+}
     
 .foot.dark-mode{
     background-image: url("../assets/beach-waves-night.gif");
 
-    .contact{
-        color: #fff;
+    .contact, .navTitle{
+        color: #ffffff99;
     }
-    .navTitle{
-        color: #fff;
-        }
+
 }
 
     .contact{

@@ -24,14 +24,14 @@
         background-color: rgba(0, 0, 0, 0.1);
     }
     
-    .name, .info p2 asp{
+    .name, .info p02 asp{
         color: #03131b;
     }
     
-    .info p1{
+    .info p01{
         color: #242da8;
     }
-    .info p2{
+    .info p02{
         color: #1d3085;
     }
 
@@ -52,14 +52,14 @@
         background-color: rgba(255, 255, 255, 0.1);
     }
     
-    .name, .info p2 asp{
+    .name, .info p02 asp{
         color: #0080d2;
     }
     
-    .info p1{
+    .info p01{
         color: #3facdf;
     }
-    .info p2{
+    .info p02{
         color: #85c5e4;
     }
 
@@ -117,7 +117,7 @@
             line-height: 0;
         }
 
-        .info p1, p2{ 
+        .info p01, p02{ 
             font-family: 'Calibri';
             text-align: center;
         }
@@ -182,10 +182,10 @@
             }
         }
         
-        .info p1{
+        .info p01{
             font-size: 15px;
         }
-        .info p2{
+        .info p02{
             font-size: 12px;
         }
 
@@ -249,10 +249,10 @@
             }
         }
     
-        .info p1{
+        .info p01{
             font-size: 30px;
         }
-        .info p2{
+        .info p02{
             font-size: 26px;
         }
 
@@ -316,10 +316,10 @@
             }
         }
     
-        .info p1{
+        .info p01{
             font-size: 48px;
         }
-        .info p2{
+        .info p02{
             font-size: 44px;
         }
 
@@ -382,10 +382,10 @@
             }
         }
     
-        .info p1{
+        .info p01{
             font-size: 64px;
         }
-        .info p2{
+        .info p02{
             font-size: 56px;
         }
 
