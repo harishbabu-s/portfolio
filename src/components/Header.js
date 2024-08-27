@@ -7,8 +7,6 @@ import photo from "../assets/Harish.jpg";
 import photoDark from "../assets/Harish-Dark.jpg";
 import sun from "../assets/sun.png";
 import moon from "../assets/moon.png";
-import moonIcon from "../assets/moon-icon.png";
-import icon from "../assets/fonto.ico";
 
 const Header = ({ Width }) => {
   const { darkMode, toggleTheme } = useTheme();
@@ -20,20 +18,23 @@ const Header = ({ Width }) => {
     Width >= 1920 ? 35 : Width >= 1280 ? 28 : Width >= 768 ? 25 : 18;
 
   return (
-    <header className={`header ${darkMode ? "dark-mode" : "light-mode"}`}>
+    <header
+      id="home"
+      className={`header ${darkMode ? "dark-mode" : "light-mode"}`}
+    >
       <nav className="nav-menu">
         <ul>
           <li>
             <a href="#home">Home</a>
           </li>
           <li>
-            <a href="#about">Timeline</a>
+            <a href="#time">Timeline</a>
           </li>
           <li>
-            <a href="#timeline">Projects</a>
+            <a href="#proj">Projects</a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#cont">Contact</a>
           </li>
           <Switch
             onChange={toggleTheme}
@@ -81,6 +82,22 @@ const Header = ({ Width }) => {
           width={300}
           alt="MyPhoto,notYours"
         />
+      </div>
+
+      <h2 className="tech-heading">Technologies</h2>
+      <div className="tech-container">
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React JS</li>
+        </ul>
+        <ul>
+          <li>React Native</li>
+          <li>UI/UX</li>
+          <li>Selenium</li>
+          <li>Agile Methodology</li>
+        </ul>
       </div>
     </header>
   );

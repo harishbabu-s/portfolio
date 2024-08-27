@@ -34,7 +34,10 @@
     .info p02{
         color: #1d3085;
     }
-
+    
+    .tech-container, .tech-heading{
+        color: #000000;
+    }
 
 }
 
@@ -63,6 +66,9 @@
         color: #85c5e4;
     }
 
+    .tech-container, .tech-heading{
+        color: #ffffff90;
+    }
 }
 
 
@@ -122,6 +128,15 @@
             text-align: center;
         }
 
+        .tech-heading, .tech-container{
+            position: absolute;
+        }
+            .tech-container ul{
+                display: flex;
+                list-style-type: "🌿"; /*🌳🌿🍀🍃*/
+                justify-content: center;
+                font-weight: bold;
+            }
   
 /*----------------------------------------------------------------------*/
 @media (min-width:375px) {
@@ -195,6 +210,23 @@
         top: 30px;
         left: 5px;
         }   
+
+        .tech-heading{
+            font-size: 11px;
+            top: 176px;
+            left: 16px;
+        }
+        .tech-container{
+            width: 100%;
+            top: 194px;
+        }
+            .tech-container ul{
+                font-size: 9px;
+                padding: 0;
+            }
+                .tech-container li{
+                    width: 82px;
+                }
 }
 
 @media (min-width:768px) {
@@ -263,6 +295,22 @@
         left: 5px;
         }   
 
+        .tech-heading{
+            font-size: 26px;
+            top: 350px;
+            left: 36px;
+        }
+        .tech-container{
+            width: 100%;
+            top: 400px;
+        }
+            .tech-container ul{
+                font-size: 16px;
+            }
+                .tech-container li{
+                    width: 170px;
+                }
+
 }
 
 @media (min-width:1280px) {
@@ -329,6 +377,22 @@
         top: 50px;
         left: 10px;
         }
+
+        .tech-heading{
+            font-size: 42px;
+            top: 586px;
+            left: 86px;
+        }
+        .tech-container{
+            width: 100%;
+            top: 670px;
+        }
+            .tech-container ul{
+                font-size: 30px;
+            }
+                .tech-container li{
+                    width: 280px;
+                }
 }
 
 @media (min-width:1920px) {
@@ -395,4 +459,20 @@
         top: 100px;
         left: 25px;
         }
+
+        .tech-heading{
+            font-size: 56px;
+            top: 890px;
+            left: 120px;
+        }
+        .tech-container{
+            width: 100%;
+            top: 1000px;
+        }
+            .tech-container ul{
+                font-size: 40px;
+            }
+                .tech-container li{
+                    width: 420px;
+                }
 }

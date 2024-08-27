@@ -47,9 +47,22 @@
         }
 
         
-    .timeline-details{
-        background-image: url("../assets/grass-and-sand-night.png");
+    .projects-certificates-container{
+        background-image: url("../assets/grass-and-sand-day.png");
     }
+        .phase-details{
+            background-image: url("../assets/grass-and-sand-phase-day.png");
+        }
+        .details-container, .projects{
+            background-color:  #03380b80; /* #788940 */
+        }
+        .details-container, .proj-description, .proj-title{
+            color: #bbbbbb;
+        }
+
+        .proj-heading, .cert-heading, .cert-title, .timeline-heading{
+            color: #000000;
+        }
 }
 
 
@@ -89,10 +102,22 @@
             color: #0478c0;
         }
     
-        .timeline-details{
+        .projects-certificates-container{
             background-image: url("../assets/grass-and-sand-night.png");
         }
-    }
+            .phase-details{
+                background-image: url("../assets/grass-and-sand-phase-night.png");
+            }
+            .details-container{
+                background-color: #03380b50; /*s #788940 */
+                opacity: 70%;
+                color: #dddddd;
+            }
+
+            .proj-heading, .proj-title, .cert-heading, .cert-title, .timeline-heading, .proj-description{
+                color: #ffffff90;
+            }
+}
 
 
     .timeline{
@@ -101,27 +126,31 @@
     position: relative;
     overflow-x: auto;
     /* height: 880px; */
-}
+    }
 
-.timeline, .timeline-details, .train{
-    background-size: cover;
-    background-repeat: no-repeat;
-    transition: background-image 2s;
-}
+    .timeline-heading{
+        position: absolute;
+    }
 
-.train{
-    display: flex;
-    flex-direction: row;
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
-    /* transition: background-image 1s; */
-    /* position: relative; */
-    /* width: 1352px; */
-    justify-content: flex-end;
-    /* width: 1352px;
-    height: 960px; */
-    /* height: 880px; */
-}
+    .timeline, .projects-certificates-container, .train{
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: background-image 2s;
+    }
+
+    .train{
+        display: flex;
+        flex-direction: row;
+        /* background-repeat: no-repeat; */
+        /* background-size: cover; */
+        /* transition: background-image 1s; */
+        /* position: relative; */
+        /* width: 1352px; */
+        justify-content: flex-end;
+        /* width: 1352px;
+        height: 960px; */
+        /* height: 880px; */
+    }
             .window{
                 /* display: flex; */
                 /* flex-direction: column; */
@@ -149,20 +178,58 @@
                 font-family: 'Roboto';
             }
 
+    .phase-details{
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .details-container{
+        display: block;
+    }
 
+    
+    
+    .projects-container, .certificates-container{
+        /* display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(800px, 1fr)); */
+        display: flex;
+        /* position: relative; */
+        /* flex-direction: row; */
+        overflow-x: auto;
+        /* border: 1px solid #ddd; */
+        /* border-radius: 8px; */
+    }
+    
+    .projects, .certificates{
+        /* display: flex; */
+        flex: 0 0 auto;
+        /* flex-direction: column; */
+        /* position: relative; */
+        align-items: flex-start;
+        /* width: 800px;
+            height: 1000px; */
+        }
 
-
-.projects{
-    height: 100px;
-}
-
+        .proj-heading, .cert-heading{
+            text-align: center;
+        }
+            .screenshots {
+                display: flex;
+                overflow-x: auto;
+            }
+            .screenshots img {
+                object-fit: cover;
+            }
 
 @media (min-width:375px) {
 
-    .timeline, .timeline-details{
+    .timeline, .projects-certificates-container{
         max-width: 375px ;
     }
-
+    .timeline-heading{
+        left: 428px;
+        font-size: 22px;
+        margin-top: 68px;
+    }
     .timeline, .train{
         height: 352px;
     }
@@ -173,7 +240,7 @@
         .bspe{
             min-width: 541px;
             }
-
+            
             .it{
                 min-width: 223px;
             }
@@ -181,10 +248,10 @@
             .new{
                 min-width: 112px;
             }
-                .window{
-                    margin-top: 153px;
-                    margin-right: 14px;
-                    border-radius: 10px;
+            .window{
+                margin-top: 153px;
+                margin-right: 14px;
+                border-radius: 10px;
                     border-width: 1px;
                     width: 82px;
                     height: 73.5px;
@@ -196,11 +263,11 @@
                     font-size: 16px;
                     height: 17px;
                 }
-    
+                
                 p2{
                     font-size: 12px;
                 }
-    
+                
                 p3{
                     margin-top: 1px;
                     font-size: 10px;
@@ -210,39 +277,99 @@
                         width: 76px;
                         height: 72px;
                     }
-
-    .timeline-details{
-        height: 375px;
+                    
+    .details-container{
+        margin: 15px;
+        padding: 15px;
+        font-size: 10px;
     }
+    
+    .projects-certificates-container{
+        height: 504px;
+    }
+    .proj-heading, .cert-heading {
+        font-size: 22px;
+        margin: 0;
+    }
+
+    .projects-container, .certificates-container{
+        gap: 8px;
+        padding: 2px 0 2px 0;
+        margin: 0 15px 0 15px;
+    }   
+        .projects, .certificates{
+            padding: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+        }        
+        .proj-title{
+            font-size: 16px;
+            margin: 0 0 2px 0;
+        }
+        .projects{
+            width: 160px;
+            height: 220px;
+        }
+            .screenshots {
+                gap: 8px;
+                padding: 8px 0;
+                width: 100%;
+                height: 110px;
+            }
+                .screenshots img {
+                    width: auto;
+                    max-height: 500px;
+                    border-radius: 4px;
+                }
+        .proj-description{
+            margin-top: 4px;
+            font-size: 10px;
+        } 
+
+        .certificates{
+            width: 160px;
+            height: 170px;
+        }
+            .cert-heading{
+                margin-top: 20px;
+            }
+            .cert-title{
+                font-size: 16px;
+                margin: 0 0 12px 0;
+                height: 34px;
+            }
 }
 
 
 @media (min-width:768px) {
-
-    .timeline, .timeline-details{
+    
+    .timeline, .projects-certificates-container{
         max-width: 768px ;
     }
-
+    .timeline-heading{
+        left: 700px;
+        font-size: 40px;
+        margin-top: 110px;
+    }
     .timeline, .train{
         height: 587px;
     }
-
+    
     .train{
         gap: 22px;
     }
         .bspe{
             min-width: 902px;
         }
-
+        
 
         .it{
             min-width: 372px;
         }
-
+        
         .new{
             min-width: 187px;
         }
-  
+        
             .window{
                 margin-top: 255px;
                 margin-right: 24px;
@@ -253,7 +380,7 @@
                 height: 124px;
                 line-height: 1.3rem;
             }
-
+            
             p1{
                 margin-top: 8px;
                 font-size: 26px;
@@ -274,36 +401,159 @@
                     height: 120px;
                 }                   
 
+                .details-container{
+                    /* height: 356px; */
+                    margin: 30px;
+                    padding: 30px;
+                    font-size: 18px;
+                }
                                 
-    .timeline-details{
-        height: 768px;
+    .projects-certificates-container{
+        height: 922px;
     }
+    .proj-heading, .cert-heading {
+        font-size: 40px;
+        margin: 0;
+    }
+
+    .projects-container, .certificates-container{
+        gap: 16px;
+        padding: 14px 0 14px 0;
+        margin: 0 30px 0 30px;
+    }   
+        .projects, .certificates{
+            padding: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+        }        
+        .proj-title{
+            font-size: 32px;
+            margin: 0 0 8px 0;
+        }
+        .projects{
+            width: 270px;
+            height: 440px;
+        }
+            .screenshots {
+                gap: 8px;
+                padding: 8px 0;
+                width: 100%;
+                height: 230px;
+            }
+                .screenshots img {
+                    width: auto;
+                    max-height: 500px;
+                    border-radius: 4px;
+                }
+        .proj-description{
+            margin-top: 12px;
+            font-size: 18px;
+        } 
+
+        .certificates{
+            width: 250px;
+            height: 200px;
+        }
+            .cert-heading{
+                margin-top: 20px;
+            }
+            .cert-title{
+                font-size: 28px;
+                margin: 0 0 8px 0;
+                height: 70px;
+            }
 }
 
 
 @media (min-width:1280px) {
 
-    .timeline, .timeline-details{
+    .timeline, .projects-certificates-container{
         max-width: 1280px ;
     }
-
-    .timeline-details{
-        height: 1280px;
+    .timeline-heading{
+        left: 700px;
+        font-size: 40px;
+        margin-top: 104px;
+    }
+    .timeline{
+        height: 606px;
+    }
+    .details-container{
+        margin: 40px;
+        padding: 40px;
+        font-size: 30px;
+    }   
+    .projects-certificates-container{
+        height: 1230px;
+    }
+    .proj-heading, .cert-heading {
+        font-size: 48px;
+        margin: 0 0 0 20px;
     }
 
-    
+    .projects-container, .certificates-container{
+        gap: 16px;
+        padding: 14px 0 14px 0;
+        margin: 0 40px 0 40px;
+    }   
+        .projects, .certificates{
+            padding: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+        }        
+        .proj-title{
+            font-size: 32px;
+            margin: 0 0 8px 0;
+        }
+        .projects{
+            width: 350px;
+            height: 720px;
+        }
+            .screenshots {
+                gap: 8px;
+                padding: 8px 0;
+                width: 100%;
+                height: 420px;
+            }
+                .screenshots img {
+                    width: auto;
+                    max-height: 500px;
+                    border-radius: 4px;
+                }
+        .proj-description{
+            margin-top: 12px;
+            font-size: 24px;
+        } 
+
+        .certificates{
+            width: 250px;
+            height: 200px;
+        }
+            .cert-heading{
+                margin-top: 24px;
+            }
+            .cert-title{
+                font-size: 28px;
+                margin: 0 0 8px 0;
+                height: 70px;
+            }
 }
 
 @media (min-width:1920px) {
 
-    .timeline, .timeline-details{
+    .timeline, .projects-certificates-container{
         max-width: 1920px ;
     }
-
-        .timeline, .train{
+    .timeline-heading{
+        left: 1060px;
+        font-size: 56px;
+        margin-top: 160px;
+    }
+        .timeline{
+            height: 900px;
+        }
+        .train{
             height: 880px;
         }        
-            .bspe{
+        .bspe{
                 min-width: 1352px;
             }
             
@@ -314,8 +564,8 @@
             .new{
                 min-width: 280px;
             }
-
-                .window{
+            
+            .window{
                     margin-top: 384px;
                     margin-right: 34px;
                     border-radius: 25px;
@@ -353,9 +603,60 @@
                         margin-right: 262px;
                         width: 192px;
                     }
-
-
-    .timeline-details{
-        height: 1920px;
-    }
+                    
+                    
+                    .details-container{
+                        margin: 56px;
+                        padding: 56px;
+                        font-size: 42px;
+                    }
+        
+        .projects-certificates-container{
+            height: 1850px;
+        }
+        .proj-heading, .cert-heading {
+            font-size: 64px;
+            margin-top: 20px;
+        }
+        
+        .projects-container, .certificates-container{
+                gap: 24px;
+                padding: 24px 0 24px 0;
+                margin: 0 56px 0 56px;
+            }   
+            .projects, .certificates{
+                padding: 16px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+            }
+            .proj-title, .cert-title{
+                font-size: 42px;
+                margin: 0 0 8px 0;
+            }            
+            .projects{
+                width: 570px;
+                height: 1150px;
+            }
+                .screenshots {
+                    gap: 8px;
+                    padding: 8px 0;
+                    width: 100%;
+                    height: 720px;
+                }
+                .screenshots img {
+                        width: auto;
+                        max-height: 500px;
+                        border-radius: 4px;
+                    }
+                .proj-description{
+                    margin-top: 12px;
+                    font-size: 36px;
+                }         
+                .certificates{
+                    width: 400px;
+                    height: 280px;
+                }
+                .cert-title{
+                    height: 100px;
+                    margin-bottom: 30px;
+                }
 }

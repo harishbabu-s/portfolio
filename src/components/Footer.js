@@ -45,13 +45,15 @@ const Footer = () => {
   ];
 
   return (
-    <footer id="ft" className={`foot ${darkMode ? "dark-mode" : "light-mode"}`}>
+    <footer className={`foot ${darkMode ? "dark-mode" : "light-mode"}`}>
       {/* <img
         src={darkMode ? beachNight : beach}
         alt={darkMode ? "beach" : "beach-night"}
         className="foot-bg"
       /> */}
-      <h4 className="contact">Contact Me</h4>
+      <h4 id="cont" className="contact">
+        Contact Me
+      </h4>
 
       <nav className="navbar">
         <ul className="navList">
