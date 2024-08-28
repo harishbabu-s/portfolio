@@ -9,7 +9,7 @@ import { useTheme } from "../utils/ToggleTheme";
 import track from "../assets/track.png";
 import trackNight from "../assets/track-night.png";
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.mjs`;
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 const MainBody = () => {
   const { darkMode } = useTheme();
@@ -34,9 +34,9 @@ const MainBody = () => {
       id: 1,
       title: "Portfolio",
       screenshots: {
-        ss1: "",
-        ss2: "",
-        ss3: "",
+        ss1: require("../assets/po_ss1.jpg"),
+        ss2: require("../assets/po_ss2.jpg"),
+        ss3: require("../assets/po_ss4.jpg"),
       },
       description:
         "Harishbabu S's portfolio containing various timelines, projects and their details, certificates and contact information",
@@ -45,9 +45,8 @@ const MainBody = () => {
       id: 2,
       title: "Little lemon",
       screenshots: {
-        ss1: "",
-        ss2: "",
-        ss3: "",
+        ss1: require("../assets/ll_ss1.jpg"),
+        ss2: require("../assets/ll_ss3.jpg"),
       },
       description:
         'Final capstone project of "Meta React-Native specialization" course which demonstrates an application built for little lemon restaurant when customers can login and view the menu',
@@ -56,23 +55,25 @@ const MainBody = () => {
       id: 3,
       title: "Learn ABC 123",
       screenshots: {
-        ss1: "",
-        ss2: "",
-        ss3: "",
+        ss1: require("../assets/la1_ss1.jpg"),
+        ss2: require("../assets/la1_ss2.jpg"),
+        ss3: require("../assets/la1_ss3.jpg"),
+        ss4: require("../assets/la1_ss4.jpg"),
+        ss4: require("../assets/la1_ss5.jpg"),
       },
       description:
         "A simple application to learn english alphabets, numbers and calendar where the alphabets, numbers and date are read out loud when tapped",
     },
     {
-      id: 3,
-      title: "Learn ABC 123",
+      id: 4,
+      title: "My Timer App ",
       screenshots: {
         ss1: "",
         ss2: "",
         ss3: "",
       },
       description:
-        "A simple application to learn english alphabets, numbers and calendar where the alphabets, numbers and date are read out loud when tapped",
+        "Application contains personalised timers and reminders for various daily routines/tasks.",
     },
   ];
 
