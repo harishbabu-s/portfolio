@@ -7,6 +7,7 @@ import photo from "../assets/Harish.jpg";
 import photoDark from "../assets/Harish-Dark.jpg";
 import sun from "../assets/sun.png";
 import moon from "../assets/moon.png";
+import resume from "../assets/Resume/Harishbabu-S_Resume.pdf";
 
 const Header = ({ Width }) => {
   const { darkMode, toggleTheme } = useTheme();
@@ -51,6 +52,16 @@ const Header = ({ Width }) => {
             width={SwitchWidth}
             handleDiameter={SwitchHandleDia}
           />
+          <li>
+            <a
+              className="resume"
+              href={resume}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Resume
+            </a>
+          </li>
         </ul>
       </nav>
       <img
@@ -64,7 +75,7 @@ const Header = ({ Width }) => {
           <h2>Harishbabu S</h2>
         </div>
         <p01>
-          <b>Front-End Mobile|Web developer</b>
+          <b>Front-End Web|Mobile developer</b>
         </p01>
         <p02>
           Aspiring to be{" "}

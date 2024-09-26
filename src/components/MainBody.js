@@ -8,6 +8,7 @@ import "../styles/MainBody.css";
 import { useTheme } from "../utils/ToggleTheme";
 import track from "../assets/track.png";
 import trackNight from "../assets/track-night.png";
+import gitIcon from "../assets/githubIcon.png";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
@@ -40,16 +41,19 @@ const MainBody = () => {
       },
       description:
         "Harishbabu S's portfolio containing various timelines, projects and their details, certificates and contact information",
+      gitPath: "https://github.com/harishbabu-s/portfolio",
     },
     {
       id: 2,
-      title: "Little lemon",
+      title: "BerozCars",
       screenshots: {
-        ss1: require("../assets/ll_ss1.jpg"),
-        ss2: require("../assets/ll_ss3.jpg"),
+        ss1: require("../assets/BC_home.png"),
+        ss2: require("../assets/BC_find.png"),
+        ss3: require("../assets/BC_sell.png"),
       },
       description:
-        'Final capstone project of "Meta React-Native specialization" course which demonstrates an application built for little lemon restaurant when customers can login and view the menu',
+        "Find Car specifications, Buy used cars and sell your car on BerozCars.",
+      gitPath: "https://github.com/harishbabu-s/berozcars",
     },
     {
       id: 3,
@@ -63,17 +67,18 @@ const MainBody = () => {
       },
       description:
         "A simple application to learn english alphabets, numbers and calendar where the alphabets, numbers and date are read out loud when tapped",
+      gitPath: "https://github.com/harishbabu-s/learn-abc-123",
     },
     {
       id: 4,
-      title: "My Timer App ",
+      title: "Little lemon",
       screenshots: {
-        ss1: "",
-        ss2: "",
-        ss3: "",
+        ss1: require("../assets/ll_ss1.jpg"),
+        ss2: require("../assets/ll_ss3.jpg"),
       },
       description:
-        "Application contains personalised timers and reminders for various daily routines/tasks.",
+        'Final capstone project of "Meta React-Native specialization" course which demonstrates an application built for little lemon restaurant when customers can login and view the menu',
+      gitPath: "https://github.com/harishbabu-s/little-lemon",
     },
   ];
 
@@ -191,7 +196,16 @@ const MainBody = () => {
         <div className="projects-container">
           {project_list.map((project) => (
             <div key={project.id} className="projects">
-              <h2 className="proj-title">{project.title}</h2>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <h2 className="proj-title">{project.title}</h2>
+                <a href={project.gitPath}>
+                  <img
+                    className="github-thumbnail"
+                    src={gitIcon}
+                    alt="Git Repo"
+                  />
+                </a>
+              </div>
               <div className="screenshots">
                 {Object.values(project.screenshots).map((src, index) => (
                   <img key={index} src={src} alt={`Screenshot ${index + 1}`} />

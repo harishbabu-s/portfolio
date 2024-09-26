@@ -185,6 +185,10 @@
         align-items: flex-start;
         }
 
+        /* .github-thumbnail{
+            object-fit: cover;
+        } */
+
         .proj-heading, .cert-heading{
             text-align: center;
         }
@@ -284,6 +288,10 @@
         .projects{
             width: 160px;
             height: 220px;
+        }
+        .github-thumbnail{
+            width: 20px;
+            height: 20px;
         }
             .screenshots {
                 gap: 8px;
@@ -413,6 +421,10 @@
             width: 270px;
             height: 440px;
         }
+        .github-thumbnail{
+            width: 40px;
+            height: 40px;
+        }
             .screenshots {
                 gap: 8px;
                 padding: 8px 0;
@@ -488,6 +500,10 @@
         .projects{
             width: 350px;
             height: 720px;
+        }
+        .github-thumbnail{
+            width: 45px;
+            height: 45px;
         }
             .screenshots {
                 gap: 8px;
@@ -618,6 +634,10 @@
             .projects{
                 width: 570px;
                 height: 1150px;
+            }
+            .github-thumbnail{
+                width: 60px;
+                height: 60px;
             }
                 .screenshots {
                     gap: 8px;

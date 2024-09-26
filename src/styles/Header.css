@@ -76,6 +76,7 @@
     display: flex;
     position: absolute;
     align-content: center;
+    width: max-content;
    
     }
         .nav-menu ul {
@@ -91,6 +92,8 @@
             text-decoration: none;
             font-weight: bold;
         }
+
+
 
   .sun-moon{
     position: absolute;
@@ -148,7 +151,6 @@
 
     .nav-menu {
         border-radius: 10px;
-        width: max-content;
         height: 30px;
         top: 10px;
         align-content: center;
@@ -158,17 +160,16 @@
     .nav-menu ul {
         margin: 0;
         padding: 5px 15px 0 15px;
-        gap: 15px
+        gap: 12px
     }
     
     .nav-menu li {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     uHI , cHI{
         font-size: 14px;
     }
-
 
     .image-container{
         align-self: center;
@@ -234,7 +235,6 @@
 
     .nav-menu {
         border-radius: 12px;
-        width: 500px;
         height: 45px;
         top: 10px;
         right: 7px;
@@ -318,7 +318,6 @@
 
     .nav-menu {
         border-radius: 18px;
-        width: 600px;
         height: 60px;
         top: 10px;
         right: 7px;
@@ -399,7 +398,6 @@
     /* max-width: 1920px ; */
     .nav-menu {
         border-radius: 20px;
-        width: 740px;
         height: 70px;
         top: 12px;
         right: 10px;
