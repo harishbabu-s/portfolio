@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
 
 import Header from "./components/Header";
 import MainBody from "./components/MainBody.js";
 import Footer from "./components/Footer";
 import "./App.css";
+
 
 function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -26,11 +26,11 @@ function App() {
   }, [windowWidth]);
 
   return (
-    <div className="App">
-      <Header Width={windowWidth} />
-      <MainBody />
-      <Footer />
-    </div>
+      <div className="App">
+        <Header Width={windowWidth} />
+        <MainBody />
+        <Footer />
+      </div>
   );
 }
 
