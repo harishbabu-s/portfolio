@@ -9,6 +9,7 @@ import { useTheme } from "../utils/ToggleTheme";
 import track from "../assets/track.png";
 import trackNight from "../assets/track-night.png";
 import gitIcon from "../assets/githubIcon.png";
+import linkIcon from "../assets/linkIcon.png";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
@@ -34,15 +35,18 @@ const MainBody = () => {
   const project_list = [
     {
       id: 1,
-      title: "Portfolio",
+      title: "Chatonymous",
       screenshots: {
-        ss1: require("../assets/po_ss1.jpg"),
-        ss2: require("../assets/po_ss2.jpg"),
-        ss3: require("../assets/po_ss4.jpg"),
+        ss1: require("../assets/chatonymousSS1.png"),
+        ss3: require("../assets/sample1.png"),
+        ss4: require("../assets/sample2.png"),
+        ss2: require("../assets/chatonymousSS2.png"),
+        ss5: require("../assets/sample3.png"),
       },
       description:
-        "Harishbabu S's portfolio containing various timelines, projects and their details, certificates and contact information",
-      gitPath: "https://github.com/harishbabu-s/portfolio",
+        "A website to chat anonymously with friends, family, colleagues and others to share opinions and thoughts confidently without revealing your identity.",
+      gitPath: "https://github.com/harishbabu-s/chatonymous",
+      link: "https://chatonymous-6lzq.onrender.com/",
     },
     {
       id: 2,
@@ -55,6 +59,7 @@ const MainBody = () => {
       description:
         "Find Car specifications, Buy used cars and sell your car on BerozCars.",
       gitPath: "https://github.com/harishbabu-s/berozcars",
+      link: "",
     },
     {
       id: 3,
@@ -69,9 +74,23 @@ const MainBody = () => {
       description:
         "A simple application to learn english alphabets, numbers and calendar where the alphabets, numbers and date are read out loud when tapped",
       gitPath: "https://github.com/harishbabu-s/learn-abc-123",
+      link: "https://expo.dev/artifacts/eas/eoShaUv2Qq8cVCbAVKrCRT.apk",
     },
     {
       id: 4,
+      title: "Portfolio",
+      screenshots: {
+        ss1: require("../assets/po_ss1.jpg"),
+        ss2: require("../assets/po_ss2.jpg"),
+        ss3: require("../assets/po_ss4.jpg"),
+      },
+      description:
+        "Harishbabu S's portfolio containing various timelines, projects and their details, certificates and contact information",
+      gitPath: "https://github.com/harishbabu-s/portfolio",
+      link: "https://harishbabu-s.github.io/portfolio/",
+    },
+    {
+      id: 5,
       title: "Little lemon",
       screenshots: {
         ss1: require("../assets/ll_ss1.jpg"),
@@ -80,6 +99,7 @@ const MainBody = () => {
       description:
         'Final capstone project of "Meta React-Native specialization" course which demonstrates an application built for little lemon restaurant when customers can login and view the menu',
       gitPath: "https://github.com/harishbabu-s/little-lemon",
+      link: "",
     },
   ];
 
@@ -169,13 +189,13 @@ const MainBody = () => {
             <p3></p3>
           </div>
         </div>
-        <div className="train new" onClick={() => handleItemClick(item.later)}>
+        {/* <div className="train new" onClick={() => handleItemClick(item.later)}>
           <div className="window next">
             <p1>Later</p1>
             <p2>Retire</p2>
             <p3></p3>
           </div>
-        </div>
+        </div> */}
       </div>
       <img
         src={darkMode ? trackNight : track}
@@ -206,6 +226,13 @@ const MainBody = () => {
             <div key={project.id} className="projects">
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <h2 className="proj-title">{project.title}</h2>
+                {project.link && <a href={project.link}>
+                  <img
+                    className="github-thumbnail"
+                    src={linkIcon}
+                    alt="App link"
+                  />
+                </a>}
                 <a href={project.gitPath}>
                   <img
                     className="github-thumbnail"

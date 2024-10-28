@@ -1,557 +1,546 @@
 .header {
-    display: flex;
-    width: 100%;
-    padding: clamp(10px, 1vw, 30px);
-    box-sizing: border-box;
-    background-size: cover;
-    aspect-ratio: 1.5;
-    position: relative;
-    background-repeat: no-repeat;
-    transition: background-image 1s;
+  display: flex;
+  width: 100%;
+  padding: clamp(10px, 1vw, 30px);
+  box-sizing: border-box;
+  background-size: cover;
+  aspect-ratio: 1.5;
+  position: relative;
+  background-repeat: no-repeat;
+  transition: background-image 1s;
 }
 
 .header.light-mode {
-    background-image: url('../assets/valley-sky-day.jpg');
+  background-image: url("../assets/valley-sky-day.jpg");
 
-    .nav-menu {
-        background-color: #ffffff40;
-    }
+  .nav-menu {
+    background-color: #ffffff40;
+  }
 
-    .nav-menu a {
-        color: #dddddd;
-    }
+  .nav-menu a {
+    color: #dddddd;
+  }
 
-    .info {
-        background-color: rgba(0, 0, 0, 0.1);
-    }
+  .info {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 
-    .name,
-    .info p02 asp {
-        color: #03131b;
-    }
+  .name,
+  .info p02 asp {
+    color: #03131b;
+  }
 
-    .info p01,
-    .info p03 {
-        color: #242da8;
-    }
+  .info p01,
+  .info p03 {
+    color: #242da8;
+  }
 
-    .info p02 {
-        color: #e42323;
-    }
+  .info p02 {
+    color: #e42323;
+  }
 
-    .tech-container,
-    .tech-heading {
-        color: #000000;
-    }
-
+  .tech-container,
+  .tech-heading {
+    color: #000000;
+  }
 }
 
 .header.dark-mode {
-    background-image: url('../assets/valley-sky-night.jpg');
+  background-image: url("../assets/valley-sky-night.jpg");
 
-    .nav-menu {
-        background-color: #ffffff20;
-    }
+  .nav-menu {
+    background-color: #ffffff20;
+  }
 
-    .nav-menu a {
-        color: #bbbbbb;
-    }
+  .nav-menu a {
+    color: #bbbbbb;
+  }
 
-    .info {
-        background-color: rgba(255, 255, 255, 0.1);
-    }
+  .info {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
 
-    .name,
-    .info p02 asp {
-        color: #0080d2;
-    }
+  .name,
+  .info p02 asp {
+    color: #0080d2;
+  }
 
-    .info p01,
-    .info p03 {
-        color: #3facdf;
-    }
+  .info p01,
+  .info p03 {
+    color: #3facdf;
+  }
 
-    .info p02 {
-        color: #d44747c9;
-    }
+  .info p02 {
+    color: #d44747c9;
+  }
 
-    .tech-container,
-    .tech-heading {
-        color: #ffffff90;
-    }
+  .tech-container,
+  .tech-heading {
+    color: #ffffff90;
+  }
 }
 
-
 .nav-menu {
-    display: flex;
-    position: absolute;
-    align-content: center;
-    width: max-content;
-
+  display: flex;
+  position: absolute;
+  align-content: center;
+  width: max-content;
 }
 
 .nav-menu ul {
-    display: flex;
-    list-style-type: none;
+  display: flex;
+  list-style-type: none;
 }
 
 .nav-menu li {
-    text-shadow: -2px 2px 1px #000000;
+  text-shadow: -2px 2px 1px #000000;
 }
 
 .nav-menu a {
-    text-decoration: none;
-    font-weight: bold;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-
-
 .sun-moon {
-    position: absolute;
+  position: absolute;
 }
 
 .image-container {
-    display: flex;
-    position: absolute;
-    aspect-ratio: 3/4;
-    height: auto;
+  display: flex;
+  position: absolute;
+  aspect-ratio: 3/4;
+  height: auto;
 }
 
 .image-container img {
-    object-fit: cover;
-    max-width: 100%;
-    width: auto;
-    height: auto;
+  object-fit: cover;
+  max-width: 100%;
+  width: auto;
+  height: auto;
 }
 
 .info {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    align-self: center;
-    align-items: center;
-
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-self: center;
+  align-items: center;
 }
 
-
 .name {
-    display: flex;
-    font-family: 'Chakra Petch';
-    font-weight: 500;
-    font-style: bold;
-    position: relative;
-    z-index: 1;
+  display: flex;
+  font-family: "Chakra Petch";
+  font-weight: 500;
+  font-style: bold;
+  position: relative;
+  z-index: 1;
 }
 
 .letter {
-    position: relative;
-    opacity: 1;
-    animation: fall 0.5s forwards;
+  position: relative;
+  opacity: 1;
+  animation-delay: 2s;
+  animation: fall 0.5s forwards;
 }
 
 @keyframes fall {
-    100% {
-        top: 0;
-        opacity: 1;
-    }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 .info p01,
 p02 {
-    font-family: 'Roboto';
-    text-align: center;
+  font-family: "Roboto";
+  text-align: center;
 }
 
 p03 {
-    font-family: 'Calibri';
-    text-align: center;
+  font-family: "Calibri";
+  text-align: center;
 }
 
 .tech-heading,
 .tech-container {
-    position: absolute;
+  position: absolute;
 }
 
 .tech-container ul {
-    display: flex;
-    list-style-type: "🌿";
-    /*🌳🌿🍀🍃*/
-    justify-content: center;
-    font-weight: bold;
+  display: flex;
+  list-style-type: "🌿";
+  /*🌳🌿🍀🍃*/
+  justify-content: center;
+  font-weight: bold;
 }
 
 /*----------------------------------------------------------------------*/
-@media (min-width:375px) {
+@media (min-width: 375px) {
+  .header {
+    align-items: center;
+    justify-content: center;
+  }
 
-    .header {
-        align-items: center;
-        justify-content: center;
-    }
+  .nav-menu {
+    border-radius: 10px;
+    height: 30px;
+    top: 10px;
+    align-content: center;
+    justify-content: center;
+  }
 
-    .nav-menu {
-        border-radius: 10px;
-        height: 30px;
-        top: 10px;
-        align-content: center;
-        justify-content: center;
-    }
+  .nav-menu ul {
+    margin: 0;
+    padding: 5px 15px 0 15px;
+    gap: 12px;
+  }
 
-    .nav-menu ul {
-        margin: 0;
-        padding: 5px 15px 0 15px;
-        gap: 12px
-    }
+  .nav-menu li {
+    font-size: 14px;
+  }
 
-    .nav-menu li {
-        font-size: 14px;
-    }
+  uHI,
+  cHI {
+    font-size: 14px;
+  }
 
-    uHI,
-    cHI {
-        font-size: 14px;
-    }
+  .image-container {
+    align-self: center;
+    top: 70px;
+    left: 50px;
+    width: 70px;
+  }
 
-    .image-container {
-        align-self: center;
-        top: 70px;
-        left: 50px;
-        width: 70px;
-    }
+  .image-container img {
+    border-radius: 10px;
+  }
 
-    .image-container img {
-        border-radius: 10px;
-    }
+  .info {
+    padding: 10px 5px 10px 45px;
+    top: 55px;
+    left: 80px;
+    height: 100px;
+    width: 230px;
+    border-radius: 8px;
+  }
 
-    .info {
-        padding: 10px 5px 10px 45px;
-        top: 55px;
-        left: 80px;
-        height: 100px;
-        width: 230px;
-        border-radius: 8px;
-    }
+  .name {
+    font-size: 2rem;
+    margin: 5px 0 2px 0;
+  }
 
-    .name {
-        font-size: 2rem;
-        margin: 5px 0 2px 0;
-    }
+  .letter {
+    top: -120px;
+  }
 
-    .letter {
-        top: -120px;
-    }
+  .info p01 {
+    font-size: 15px;
+  }
 
-    .info p01 {
-        font-size: 15px;
-    }
+  .info p02 {
+    font-size: 12px;
+  }
 
-    .info p02 {
-        font-size: 12px;
-    }
+  .info p03 {
+    font-size: 10px;
+  }
 
-    .info p03 {
-        font-size: 10px;
-    }
+  .sun-moon {
+    width: 60px;
+    height: 60px;
+    top: 30px;
+    left: 5px;
+  }
 
-    .sun-moon {
-        width: 60px;
-        height: 60px;
-        top: 30px;
-        left: 5px;
-    }
+  .tech-heading {
+    font-size: 11px;
+    top: 176px;
+    left: 16px;
+  }
 
-    .tech-heading {
-        font-size: 11px;
-        top: 176px;
-        left: 16px;
-    }
+  .tech-container {
+    width: 100%;
+    top: 194px;
+  }
 
-    .tech-container {
-        width: 100%;
-        top: 194px;
-    }
+  .tech-container ul {
+    font-size: 9px;
+    padding: 0;
+  }
 
-    .tech-container ul {
-        font-size: 9px;
-        padding: 0;
-    }
-
-    .tech-container li {
-        width: 82px;
-    }
+  .tech-container li {
+    width: 108px;
+  }
 }
 
-@media (min-width:768px) {
-    .nav-menu {
-        border-radius: 12px;
-        height: 45px;
-        top: 10px;
-        right: 7px;
-    }
+@media (min-width: 768px) {
+  .nav-menu {
+    border-radius: 12px;
+    height: 45px;
+    top: 10px;
+    right: 7px;
+  }
 
-    .nav-menu ul {
-        margin: 0;
-        padding: 8px 25px 0 25px;
-        gap: 25px
-    }
+  .nav-menu ul {
+    margin: 0;
+    padding: 8px 25px 0 25px;
+    gap: 25px;
+  }
 
-    .nav-menu li {
-        font-size: 22px;
-    }
+  .nav-menu li {
+    font-size: 22px;
+  }
 
-    uHI,
-    cHI {
-        font-size: 20px;
-    }
+  uHI,
+  cHI {
+    font-size: 20px;
+  }
 
+  .image-container {
+    top: 120px;
+    left: 100px;
+    width: 150px;
+  }
 
-    .image-container {
-        top: 120px;
-        left: 100px;
-        width: 150px;
-    }
+  .image-container img {
+    border-radius: 20px;
+  }
 
-    .image-container img {
-        border-radius: 20px;
-    }
+  .info {
+    padding: 15px 5px 5px 90px;
+    top: 75px;
+    left: 160px;
+    height: 260px;
+    width: 480px;
+    border-radius: 10px;
+  }
 
-    .info {
-        padding: 15px 5px 5px 90px;
-        top: 75px;
-        left: 160px;
-        height: 260px;
-        width: 480px;
-        border-radius: 10px;
-    }
+  .name {
+    font-size: 60px;
+    margin: 30px 0 10px 0;
+  }
 
-    .name {
-        font-size: 60px;
-        margin: 30px 0 10px 0;
-    }
+  .letter {
+    top: -200px;
+  }
 
-    .letter {
-        top: -200px;
-    }
+  .info p01 {
+    font-size: 30px;
+  }
 
-    .info p01 {
-        font-size: 30px;
-    }
+  .info p02 {
+    font-size: 26px;
+    margin: 5px 0 8px 0;
+  }
 
-    .info p02 {
-        font-size: 26px;
-        margin: 5px 0 8px 0;
-    }
+  .info p03 {
+    font-size: 22px;
+  }
 
-    .info p03 {
-        font-size: 22px;
-    }
+  .sun-moon {
+    width: 120px;
+    height: 120px;
+    top: 30px;
+    left: 5px;
+  }
 
-    .sun-moon {
-        width: 120px;
-        height: 120px;
-        top: 30px;
-        left: 5px;
-    }
+  .tech-heading {
+    font-size: 26px;
+    top: 350px;
+    left: 36px;
+  }
 
-    .tech-heading {
-        font-size: 26px;
-        top: 350px;
-        left: 36px;
-    }
+  .tech-container {
+    width: 100%;
+    top: 400px;
+  }
 
-    .tech-container {
-        width: 100%;
-        top: 400px;
-    }
+  .tech-container ul {
+    font-size: 16px;
+  }
 
-    .tech-container ul {
-        font-size: 16px;
-    }
-
-    .tech-container li {
-        width: 170px;
-    }
-
+  .tech-container li {
+    width: 200px;
+  }
 }
 
-@media (min-width:1280px) {
-    .nav-menu {
-        border-radius: 18px;
-        height: 60px;
-        top: 10px;
-        right: 7px;
-    }
+@media (min-width: 1280px) {
+  .nav-menu {
+    border-radius: 18px;
+    height: 60px;
+    top: 10px;
+    right: 7px;
+  }
 
-    .nav-menu ul {
-        margin: 0;
-        padding: 8px 25px 0 25px;
-        ;
-        gap: 25px
-    }
+  .nav-menu ul {
+    margin: 0;
+    padding: 8px 25px 0 25px;
+    gap: 25px;
+  }
 
-    .nav-menu li {
-        font-size: 1.7rem;
-    }
+  .nav-menu li {
+    font-size: 1.7rem;
+  }
 
-    uHI,
-    cHI {
-        font-size: 1.25rem;
-    }
+  uHI,
+  cHI {
+    font-size: 1.25rem;
+  }
 
-    .image-container {
-        top: 200px;
-        left: 180px;
-        width: 250px;
-    }
+  .image-container {
+    top: 200px;
+    left: 180px;
+    width: 250px;
+  }
 
-    .image-container img {
-        border-radius: 35px;
-    }
+  .image-container img {
+    border-radius: 35px;
+  }
 
-    .info {
-        padding: 15px 5px 5px 140px;
-        top: 150px;
-        left: 300px;
-        height: 400px;
-        width: 780px;
-        border-radius: 20px;
-    }
+  .info {
+    padding: 15px 5px 5px 140px;
+    top: 150px;
+    left: 300px;
+    height: 400px;
+    width: 780px;
+    border-radius: 20px;
+  }
 
-    .name {
-        font-size: 100px;
-        margin: 50px 0 20px 0;
-    }
+  .name {
+    font-size: 100px;
+    margin: 50px 0 20px 0;
+  }
 
-    .letter {
-        top: -350px;
-    }
+  .letter {
+    top: -350px;
+  }
 
-    .info p01 {
-        font-size: 48px;
-    }
+  .info p01 {
+    font-size: 48px;
+  }
 
-    .info p02 {
-        font-size: 44px;
-    }
+  .info p02 {
+    font-size: 44px;
+  }
 
-    .info p03 {
-        font-size: 40px;
-    }
+  .info p03 {
+    font-size: 40px;
+  }
 
-    .sun-moon {
-        width: 200px;
-        height: 200px;
-        top: 50px;
-        left: 10px;
-    }
+  .sun-moon {
+    width: 200px;
+    height: 200px;
+    top: 50px;
+    left: 10px;
+  }
 
-    .tech-heading {
-        font-size: 42px;
-        top: 586px;
-        left: 86px;
-    }
+  .tech-heading {
+    font-size: 42px;
+    top: 586px;
+    left: 86px;
+  }
 
-    .tech-container {
-        width: 100%;
-        top: 670px;
-    }
+  .tech-container {
+    width: 100%;
+    top: 670px;
+  }
 
-    .tech-container ul {
-        font-size: 30px;
-    }
+  .tech-container ul {
+    font-size: 30px;
+  }
 
-    .tech-container li {
-        width: 280px;
-    }
+  .tech-container li {
+    width: 360px;
+  }
 }
 
-@media (min-width:1920px) {
-    .nav-menu {
-        border-radius: 20px;
-        height: 70px;
-        top: 12px;
-        right: 10px;
-    }
+@media (min-width: 1920px) {
+  .nav-menu {
+    border-radius: 20px;
+    height: 70px;
+    top: 12px;
+    right: 10px;
+  }
 
-    .nav-menu ul {
-        margin: 0;
-        padding: 10px 30px 0 30px;
-        gap: 30px
-    }
+  .nav-menu ul {
+    margin: 0;
+    padding: 10px 30px 0 30px;
+    gap: 30px;
+  }
 
-    .nav-menu li {
-        font-size: 2rem;
-    }
+  .nav-menu li {
+    font-size: 2rem;
+  }
 
-    uHI,
-    cHI {
-        font-size: 1.52rem;
-    }
+  uHI,
+  cHI {
+    font-size: 1.52rem;
+  }
 
+  .image-container {
+    top: 300px;
+    left: 240px;
+    width: 330px;
+  }
 
-    .image-container {
-        top: 300px;
-        left: 240px;
-        width: 330px;
-    }
+  .image-container img {
+    border-radius: 50px;
+  }
 
-    .image-container img {
-        border-radius: 50px;
-    }
+  .info {
+    padding: 44px 5px 5px 180px;
+    top: 220px;
+    left: 400px;
+    height: 550px;
+    width: 1200px;
+    border-radius: 30px;
+  }
 
-    .info {
-        padding: 44px 5px 5px 180px;
-        top: 220px;
-        left: 400px;
-        height: 550px;
-        width: 1200px;
-        border-radius: 30px;
-    }
+  .name {
+    font-size: 150px;
+    margin: 50px 0 30px 0;
+  }
 
-    .name {
-        font-size: 150px;
-        margin: 50px 0 30px 0;
-    }
+  .letter {
+    top: -500px;
+  }
 
-    .letter {
-        top: -500px;
-    }
+  .info p01 {
+    font-size: 64px;
+  }
 
-    .info p01 {
-        font-size: 64px;
-    }
+  .info p02 {
+    font-size: 56px;
+    margin: 12px 0 18px 0;
+  }
 
-    .info p02 {
-        font-size: 56px;
-        margin: 12px 0 18px 0;
-    }
+  .info p03 {
+    font-size: 48px;
+  }
 
-    .info p03 {
-        font-size: 48px;
-    }
+  .sun-moon {
+    width: 250px;
+    height: 250px;
+    top: 100px;
+    left: 25px;
+  }
 
-    .sun-moon {
-        width: 250px;
-        height: 250px;
-        top: 100px;
-        left: 25px;
-    }
+  .tech-heading {
+    font-size: 56px;
+    top: 890px;
+    left: 120px;
+  }
 
-    .tech-heading {
-        font-size: 56px;
-        top: 890px;
-        left: 120px;
-    }
+  .tech-container {
+    width: 100%;
+    top: 1000px;
+  }
 
-    .tech-container {
-        width: 100%;
-        top: 1000px;
-    }
+  .tech-container ul {
+    font-size: 40px;
+  }
 
-    .tech-container ul {
-        font-size: 40px;
-    }
-
-    .tech-container li {
-        width: 420px;
-    }
+  .tech-container li {
+    width: 500px;
+  }
 }
