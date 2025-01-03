@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.ab60814f.css",
-    "main.js": "/portfolio/static/js/main.af59c8a1.js",
+    "main.js": "/portfolio/static/js/main.8120c4ee.js",
     "static/js/453.1407b060.chunk.js": "/portfolio/static/js/453.1407b060.chunk.js",
     "static/media/beach-waves.gif": "/portfolio/static/media/beach-waves.7165b69122c60d11e319.gif",
     "static/media/beach-waves-night.gif": "/portfolio/static/media/beach-waves-night.ba6ffdf15efbbd75f100.gif",
@@ -21,13 +21,15 @@
     "static/media/Harish-Dark.jpg": "/portfolio/static/media/Harish-Dark.ab4f9d731693751eb7a1.jpg",
     "static/media/la1_ss3.jpg": "/portfolio/static/media/la1_ss3.0a0fa5af3c857486ea63.jpg",
     "static/media/MetaReactNative.pdf": "/portfolio/static/media/MetaReactNative.e00f82819379d320b953.pdf",
+    "static/media/Screenshot_20250103_131139_Expo Go.jpg": "/portfolio/static/media/Screenshot_20250103_131139_Expo Go.246fe0f5e07fb74f72c0.jpg",
     "static/media/track.png": "/portfolio/static/media/track.5651248355f2781fdfd3.png",
+    "static/media/Screenshot_20250103_131658_Expo Go.jpg": "/portfolio/static/media/Screenshot_20250103_131658_Expo Go.2b0f88b5a94ee107b535.jpg",
     "static/media/PrinciplesofUXUIDesign.pdf": "/portfolio/static/media/PrinciplesofUXUIDesign.7948afab67ceb82425ac.pdf",
     "static/media/ProgramingwithJavaScript.pdf": "/portfolio/static/media/ProgramingwithJavaScript.94012c8897445fcfac64.pdf",
     "static/media/ReactBasics.pdf": "/portfolio/static/media/ReactBasics.03f2ffc0012352a4eb75.pdf",
-    "static/media/Harishbabu-S.pdf": "/portfolio/static/media/Harishbabu-S.c91e4a86f2fa68150c51.pdf",
     "static/media/la1_ss5.jpg": "/portfolio/static/media/la1_ss5.53befa3aa02fd3f00a35.jpg",
     "static/media/train-it-night.png": "/portfolio/static/media/train-it-night.36b9240ce09c281a802a.png",
+    "static/media/Screenshot_20250103_130419_Expo Go.jpg": "/portfolio/static/media/Screenshot_20250103_130419_Expo Go.540d7e1606dcc713578e.jpg",
     "static/media/train-new.png": "/portfolio/static/media/train-new.fb097095e45fa9f87d8f.png",
     "static/media/track-night.png": "/portfolio/static/media/track-night.d46e51888fbcf967fcc1.png",
     "static/media/la1_ss2.jpg": "/portfolio/static/media/la1_ss2.fa47f1522fca90a8eb88.jpg",
@@ -38,6 +40,7 @@
     "static/media/po_ss1.jpg": "/portfolio/static/media/po_ss1.40be50fc349d632f0475.jpg",
     "static/media/train-new-night.png": "/portfolio/static/media/train-new-night.08495fc89c1889d9cef5.png",
     "static/media/po_ss4.jpg": "/portfolio/static/media/po_ss4.acfe9a61170b390fb8e1.jpg",
+    "static/media/Harishbabu_S.pdf": "/portfolio/static/media/Harishbabu_S.fee941a1def2474406b0.pdf",
     "static/media/green-night.jpg": "/portfolio/static/media/green-night.5d07998eab9e750a43c7.jpg",
     "static/media/github.png": "/portfolio/static/media/github.f2009292c4ecebae8c9c.png",
     "static/media/BC_find.png": "/portfolio/static/media/BC_find.ff50238a10e167770250.png",
@@ -51,11 +54,11 @@
     "static/media/whatsapp.png": "/portfolio/static/media/whatsapp.c9e87e0f49b9414df1a9.png",
     "index.html": "/portfolio/index.html",
     "main.ab60814f.css.map": "/portfolio/static/css/main.ab60814f.css.map",
-    "main.af59c8a1.js.map": "/portfolio/static/js/main.af59c8a1.js.map",
+    "main.8120c4ee.js.map": "/portfolio/static/js/main.8120c4ee.js.map",
     "453.1407b060.chunk.js.map": "/portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ab60814f.css",
-    "static/js/main.af59c8a1.js"
+    "static/js/main.8120c4ee.js"
   ]
 }
