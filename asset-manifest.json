@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.ab60814f.css",
-    "main.js": "/portfolio/static/js/main.8120c4ee.js",
+    "main.js": "/portfolio/static/js/main.483173a6.js",
     "static/js/453.1407b060.chunk.js": "/portfolio/static/js/453.1407b060.chunk.js",
     "static/media/beach-waves.gif": "/portfolio/static/media/beach-waves.7165b69122c60d11e319.gif",
     "static/media/beach-waves-night.gif": "/portfolio/static/media/beach-waves-night.ba6ffdf15efbbd75f100.gif",
@@ -40,7 +40,7 @@
     "static/media/po_ss1.jpg": "/portfolio/static/media/po_ss1.40be50fc349d632f0475.jpg",
     "static/media/train-new-night.png": "/portfolio/static/media/train-new-night.08495fc89c1889d9cef5.png",
     "static/media/po_ss4.jpg": "/portfolio/static/media/po_ss4.acfe9a61170b390fb8e1.jpg",
-    "static/media/Harishbabu_S.pdf": "/portfolio/static/media/Harishbabu_S.fee941a1def2474406b0.pdf",
+    "static/media/Harishbabu_S.pdf": "/portfolio/static/media/Harishbabu_S.bc485706dbb6a3eb48cf.pdf",
     "static/media/green-night.jpg": "/portfolio/static/media/green-night.5d07998eab9e750a43c7.jpg",
     "static/media/github.png": "/portfolio/static/media/github.f2009292c4ecebae8c9c.png",
     "static/media/BC_find.png": "/portfolio/static/media/BC_find.ff50238a10e167770250.png",
@@ -54,11 +54,11 @@
     "static/media/whatsapp.png": "/portfolio/static/media/whatsapp.c9e87e0f49b9414df1a9.png",
     "index.html": "/portfolio/index.html",
     "main.ab60814f.css.map": "/portfolio/static/css/main.ab60814f.css.map",
-    "main.8120c4ee.js.map": "/portfolio/static/js/main.8120c4ee.js.map",
+    "main.483173a6.js.map": "/portfolio/static/js/main.483173a6.js.map",
     "453.1407b060.chunk.js.map": "/portfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ab60814f.css",
-    "static/js/main.8120c4ee.js"
+    "static/js/main.483173a6.js"
   ]
 }
