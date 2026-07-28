@@ -84,17 +84,17 @@ const Header = ({ Width }) => {
           ))}
         </div>
         <p01>
-          <b>Front-End Web|Mobile developer</b>
+          <b>Full stack web developer</b>
         </p01>
         <p02>
           Aspiring to be{" "}
           <asp>
-            <strong>Full stack developer</strong>
+            <strong>AI Engineer</strong>
           </asp>
           {/* <br /> */}
         </p02>
         <p03>
-          Also was a <b>Test Automation Engineer</b>
+          Always open to <b>learn new technologies</b>
         </p03>
       </div>
 
@@ -109,14 +109,14 @@ const Header = ({ Width }) => {
       <h2 className="tech-heading">Technologies</h2>
       <div className="tech-container">
         <ul>
-          <li>JavaScript</li>
-          <li>React JS</li>
-          <li>Node, Express, MongoDB</li>
+          <li>Typescript</li>
+          <li>Node, FastApi</li>
+          <li>MCP, A2A Protocol</li>
         </ul>
         <ul>
-          <li>React Native</li>
-          <li>Selenium</li>
-          <li>Agile Methodology</li>
+          <li>Python</li>
+          <li>React JS</li>
+          <li>Azure Services</li>
         </ul>
       </div>
     </header>

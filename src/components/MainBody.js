@@ -6,6 +6,7 @@ import { pdfjs } from "react-pdf";
 
 import "../styles/MainBody.css";
 import { useTheme } from "../utils/ToggleTheme";
+import { item, project_list, certificate_list } from "../data/data";
 import track from "../assets/track.png";
 import trackNight from "../assets/track-night.png";
 import gitIcon from "../assets/githubIcon.png";
@@ -19,117 +20,6 @@ const MainBody = () => {
   const [details, setDetails] = useState(
     "Click on any train window to see details."
   );
-
-  const item = {
-    born: "Born and brought up in Bangalore.\nMother tongue - Telugu.\n",
-    school:
-      "Did my primary schooling (1st standard - 7th standard) in Bethzada church school and then switched to Indiranagar highschool for higher schooling (8th standard – 10th standard).\nCompleted SSLC (Secondary school leaving certificate) in 2014 with a percentage of 74.40 ",
-    puc: "With PCME ( Physics, Chemistry, Mathematics, Electronics) as main stream completed my 12th standard/ PUC(Pre-University certificate) at Cathedral composite PU college in 2016 with a percentage of 63.83. ",
-    engg: "Completed Bachelors degree program in Mechatronics stream at Oxford college of engineering in 2020 with CGPA of 6.49 ",
-    it: "Started my professional journey at Infosys as a fresher. I worked for nearly 3 years. During my tenure, my role evolved significantly, and I was actively involved in various development activities.\nFor the first 2 years, I contributed to the RaboBank, Netherlands project, playing a key role in the development of the PMO portal. This experience allowed me to hone my skills in both development and project management.\nIn the subsequent year, I transitioned to working with ABN amro Bank, Netherlands, where I was involved in Azure cloud services, Data migration/reconciliation and API development activities. This role enabled me to gain valuable experience in cloud technologies and API integration. ",
-    trs: "I have a background in front-end development with React JS. To broaden my skill set and pursue my goal of becoming a full stack developer, I've been expanding my knowledge in full stack technologies.\nAdditionally, driven by an interest in mobile app development, I completed a React Native specialization course.\nAt present, I am seeking opportunities where I can leverage both my front-end skills and my new full-stack capabilities. I am open to roles focused exclusively on FRONTEND DEVELOPMENT as well as positions that offer the chance to apply my full-stack knowledge. My diverse experience equips me to contribute effectively in various development environments.",
-    next: "Looking forward to expand knowledge in every area possible in the organisation that I will be working",
-    later: "Follow the destiny, but work hard to get complete control over the destiny",
-  };
-
-  const project_list = [
-    {
-      id: 1,
-      title: "Chatonymous",
-      screenshots: {
-        ss1: require("../assets/chatonymousSS1.png"),
-        ss3: require("../assets/sample1.png"),
-        ss4: require("../assets/sample2.png"),
-        ss2: require("../assets/chatonymousSS2.png"),
-        ss5: require("../assets/sample3.png"),
-      },
-      description:
-        "A website to chat anonymously with friends, family, colleagues and others to share opinions and thoughts confidently without revealing your identity.",
-      gitPath: "https://github.com/harishbabu-s/chatonymous",
-      link: "https://chatonymous-6lzq.onrender.com/",
-    },
-    {
-      id: 2,
-      title: "BerozCars",
-      screenshots: {
-        ss1: require("../assets/BC_home.png"),
-        ss2: require("../assets/BC_find.png"),
-        ss3: require("../assets/BC_sell.png"),
-      },
-      description:
-        "Find Car specifications, Buy used cars and sell your car on BerozCars.",
-      gitPath: "https://github.com/harishbabu-s/berozcars",
-      link: "",
-    },
-    {
-      id: 3,
-      title: "Learn ABC 123",
-      screenshots: {
-        ss1: require("../assets/la1_ss1.jpg"),
-        ss2: require("../assets/la1_ss2.jpg"),
-        ss3: require("../assets/la1_ss3.jpg"),
-        ss4: require("../assets/la1_ss4.jpg"),
-        ss5: require("../assets/la1_ss5.jpg"),
-      },
-      description:
-        "A simple application to learn english alphabets, numbers and calendar where the alphabets, numbers and date are read out loud when tapped",
-      gitPath: "https://github.com/harishbabu-s/learn-abc-123",
-      link: "https://expo.dev/artifacts/eas/eoShaUv2Qq8cVCbAVKrCRT.apk",
-    },
-    {
-      id: 4,
-      title: "Portfolio",
-      screenshots: {
-        ss1: require("../assets/po_ss1.jpg"),
-        ss2: require("../assets/po_ss2.jpg"),
-        ss3: require("../assets/po_ss4.jpg"),
-      },
-      description:
-        "Harishbabu S's portfolio containing various timelines, projects and their details, certificates and contact information",
-      gitPath: "https://github.com/harishbabu-s/portfolio",
-      link: "https://harishbabu-s.github.io/portfolio/",
-    },
-    {
-      id: 5,
-      title: "Little lemon",
-      screenshots: {
-        ss1: require("../assets/ll_ss1.jpg"),
-        ss2: require("../assets/ll_ss3.jpg"),
-      },
-      description:
-        'Final capstone project of "Meta React-Native specialization" course which demonstrates an application built for little lemon restaurant when customers can login and view the menu',
-      gitPath: "https://github.com/harishbabu-s/little-lemon",
-      link: "",
-    },
-  ];
-
-  const certificate_list = [
-    {
-      id: 1,
-      title: "Meta React Native Specialization",
-      path: require("../assets/MetaReactNative.pdf"),
-    },
-    {
-      id: 2,
-      title: "Programming with JavaScript",
-      path: require("../assets/ProgramingwithJavaScript.pdf"),
-    },
-    {
-      id: 3,
-      title: "React Basics",
-      path: require("../assets/ReactBasics.pdf"),
-    },
-    {
-      id: 4,
-      title: "Principles of UX/UI Design",
-      path: require("../assets/PrinciplesofUXUIDesign.pdf"),
-    },
-    {
-      id: 5,
-      title: "AZ 900",
-      path: "",
-    },
-  ];
 
   const handleItemClick = (itemDetails) => {
     setDetails(itemDetails);
@@ -156,7 +46,9 @@ const MainBody = () => {
             <p2>SSLC / 10th</p2>
             <p3>April 2014</p3>
           </div>
-          <div className="window puc" onClick={() => handleItemClick(item.puc)}>
+          <div className="window puc"
+            onClick={() => handleItemClick(item.puc)}
+          >
             <p1>PUC/12th </p1>
             <p2>PCME</p2>
             <p3>2015-16</p3>
@@ -170,19 +62,31 @@ const MainBody = () => {
             <p3>2016 - 20</p3>
           </div>
         </div>
-        <div className="train it">
-          <div className="window infy" onClick={() => handleItemClick(item.it)}>
+        <div className="train two">
+          <div className="window two-one" onClick={() => handleItemClick(item.infy)}>
             <p1>Work</p1>
             <p2>Infosys</p2>
-            <p3>July 2021-July 2024</p3>
+            <p3>Jul 2021 - Jul 2024</p3>
           </div>
-          <div className="window trs" onClick={() => handleItemClick(item.trs)}>
-            <p1>Present</p1>
-            <p2>Learning</p2>
-            <p3>Full-Stack Development</p3>
+          <div className="window two-two" onClick={() => handleItemClick(item.learning)}>
+            <p1>Learning</p1>
+            <p2>Self-learning</p2>
+            <p3>Jul 2024 - Dec 2024</p3>
           </div>
         </div>
-        <div className="train new" onClick={() => handleItemClick(item.next)}>
+        <div className="train two">
+          <div className="window two-one" onClick={() => handleItemClick(item.hcl)}>
+            <p1>Work</p1>
+            <p2>HCL Tech</p2>
+            <p3>Jan 2025 - Nov 2025</p3>
+          </div>
+          <div className="window two-one" onClick={() => handleItemClick(item.bayer)}>
+              <p1>Work</p1>
+              <p2>Bayer</p2>
+              <p3>Dec 2025 - Present</p3>
+          </div>
+        </div>
+        <div className="train one" onClick={() => handleItemClick(item.next)}>
           <div className="window next">
             <p1>Next...!</p1>
             <p2>Work in your organization to prove my skills.</p2>
