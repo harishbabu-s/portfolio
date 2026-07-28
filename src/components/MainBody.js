@@ -9,6 +9,7 @@ import { useTheme } from "../utils/ToggleTheme";
 import track from "../assets/track.png";
 import trackNight from "../assets/track-night.png";
 import gitIcon from "../assets/githubIcon.png";
+import linkIcon from "../assets/linkIcon.png";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
@@ -25,23 +26,27 @@ const MainBody = () => {
       "Did my primary schooling (1st standard - 7th standard) in Bethzada church school and then switched to Indiranagar highschool for higher schooling (8th standard – 10th standard).\nCompleted SSLC (Secondary school leaving certificate) in 2014 with a percentage of 74.40 ",
     puc: "With PCME ( Physics, Chemistry, Mathematics, Electronics) as main stream completed my 12th standard/ PUC(Pre-University certificate) at Cathedral composite PU college in 2016 with a percentage of 63.83. ",
     engg: "Completed Bachelors degree program in Mechatronics stream at Oxford college of engineering in 2020 with CGPA of 6.49 ",
-    it: "Started my professional journey at Infosys as a fresher.  I worked for nearly 3 years, where I was officially designated as a Test Engineer. During my tenure, my role evolved significantly, and I was actively involved in various development activities.\nFor the first 2 years, I contributed to the RaboBank, Netherlands project, playing a key role in the development of the PMO portal. This experience allowed me to hone my skills in both development and project management.\nIn the subsequent year, I transitioned to working with ABN amro Bank, Netherlands, where I focused on Azure cloud services and API development. This role enabled me to gain valuable experience in cloud technologies and API integration. ",
-    trs: "I have a background in front-end development with React JS. To broaden my skill set and pursue my goal of becoming a full stack developer, I've been expanding my knowledge in full stack technologies.\nAdditionally, driven by an interest in mobile app development, I completed a React Native specialization course.\nAt present, I am seeking opportunities where I can leverage both my front-end skills and my new full-stack capabilities. I am open to roles focused exclusively on front-end development as well as positions that offer the chance to apply my full-stack knowledge. My diverse experience equips me to contribute effectively in various development environments.",
-    next: "Follow the destiny, but work hard to get complete control over the destiny",
+    it: "Started my professional journey at Infosys as a fresher. I worked for nearly 3 years. During my tenure, my role evolved significantly, and I was actively involved in various development activities.\nFor the first 2 years, I contributed to the RaboBank, Netherlands project, playing a key role in the development of the PMO portal. This experience allowed me to hone my skills in both development and project management.\nIn the subsequent year, I transitioned to working with ABN amro Bank, Netherlands, where I was involved in Azure cloud services, Data migration/reconciliation and API development activities. This role enabled me to gain valuable experience in cloud technologies and API integration. ",
+    trs: "I have a background in front-end development with React JS. To broaden my skill set and pursue my goal of becoming a full stack developer, I've been expanding my knowledge in full stack technologies.\nAdditionally, driven by an interest in mobile app development, I completed a React Native specialization course.\nAt present, I am seeking opportunities where I can leverage both my front-end skills and my new full-stack capabilities. I am open to roles focused exclusively on FRONTEND DEVELOPMENT as well as positions that offer the chance to apply my full-stack knowledge. My diverse experience equips me to contribute effectively in various development environments.",
+    next: "Looking forward to expand knowledge in every area possible in the organisation that I will be working",
+    later: "Follow the destiny, but work hard to get complete control over the destiny",
   };
 
   const project_list = [
     {
       id: 1,
-      title: "Portfolio",
+      title: "Chatonymous",
       screenshots: {
-        ss1: require("../assets/po_ss1.jpg"),
-        ss2: require("../assets/po_ss2.jpg"),
-        ss3: require("../assets/po_ss4.jpg"),
+        ss1: require("../assets/chatonymousSS1.png"),
+        ss3: require("../assets/sample1.png"),
+        ss4: require("../assets/sample2.png"),
+        ss2: require("../assets/chatonymousSS2.png"),
+        ss5: require("../assets/sample3.png"),
       },
       description:
-        "Harishbabu S's portfolio containing various timelines, projects and their details, certificates and contact information",
-      gitPath: "https://github.com/harishbabu-s/portfolio",
+        "A website to chat anonymously with friends, family, colleagues and others to share opinions and thoughts confidently without revealing your identity.",
+      gitPath: "https://github.com/harishbabu-s/chatonymous",
+      link: "https://chatonymous-6lzq.onrender.com/",
     },
     {
       id: 2,
@@ -54,6 +59,7 @@ const MainBody = () => {
       description:
         "Find Car specifications, Buy used cars and sell your car on BerozCars.",
       gitPath: "https://github.com/harishbabu-s/berozcars",
+      link: "",
     },
     {
       id: 3,
@@ -63,14 +69,28 @@ const MainBody = () => {
         ss2: require("../assets/la1_ss2.jpg"),
         ss3: require("../assets/la1_ss3.jpg"),
         ss4: require("../assets/la1_ss4.jpg"),
-        ss4: require("../assets/la1_ss5.jpg"),
+        ss5: require("../assets/la1_ss5.jpg"),
       },
       description:
         "A simple application to learn english alphabets, numbers and calendar where the alphabets, numbers and date are read out loud when tapped",
       gitPath: "https://github.com/harishbabu-s/learn-abc-123",
+      link: "https://expo.dev/artifacts/eas/eoShaUv2Qq8cVCbAVKrCRT.apk",
     },
     {
       id: 4,
+      title: "Portfolio",
+      screenshots: {
+        ss1: require("../assets/po_ss1.jpg"),
+        ss2: require("../assets/po_ss2.jpg"),
+        ss3: require("../assets/po_ss4.jpg"),
+      },
+      description:
+        "Harishbabu S's portfolio containing various timelines, projects and their details, certificates and contact information",
+      gitPath: "https://github.com/harishbabu-s/portfolio",
+      link: "https://harishbabu-s.github.io/portfolio/",
+    },
+    {
+      id: 5,
       title: "Little lemon",
       screenshots: {
         ss1: require("../assets/ll_ss1.jpg"),
@@ -79,6 +99,7 @@ const MainBody = () => {
       description:
         'Final capstone project of "Meta React-Native specialization" course which demonstrates an application built for little lemon restaurant when customers can login and view the menu',
       gitPath: "https://github.com/harishbabu-s/little-lemon",
+      link: "",
     },
   ];
 
@@ -164,10 +185,17 @@ const MainBody = () => {
         <div className="train new" onClick={() => handleItemClick(item.next)}>
           <div className="window next">
             <p1>Next...!</p1>
-            <p2>Retire</p2>
+            <p2>Work in your organization to prove my skills.</p2>
             <p3></p3>
           </div>
         </div>
+        {/* <div className="train new" onClick={() => handleItemClick(item.later)}>
+          <div className="window next">
+            <p1>Later</p1>
+            <p2>Retire</p2>
+            <p3></p3>
+          </div>
+        </div> */}
       </div>
       <img
         src={darkMode ? trackNight : track}
@@ -198,6 +226,13 @@ const MainBody = () => {
             <div key={project.id} className="projects">
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <h2 className="proj-title">{project.title}</h2>
+                {project.link && <a href={project.link}>
+                  <img
+                    className="github-thumbnail"
+                    src={linkIcon}
+                    alt="App link"
+                  />
+                </a>}
                 <a href={project.gitPath}>
                   <img
                     className="github-thumbnail"

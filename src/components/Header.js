@@ -7,7 +7,7 @@ import photo from "../assets/Harish.jpg";
 import photoDark from "../assets/Harish-Dark.jpg";
 import sun from "../assets/sun.png";
 import moon from "../assets/moon.png";
-import resume from "../assets/Resume/Harishbabu-S_Resume.pdf";
+import resume from "../assets/Resume/Harishbabu-S.pdf";
 
 const Header = ({ Width }) => {
   const { darkMode, toggleTheme } = useTheme();
@@ -18,6 +18,10 @@ const Header = ({ Width }) => {
   const SwitchHandleDia =
     Width >= 1920 ? 35 : Width >= 1280 ? 28 : Width >= 768 ? 25 : 18;
 
+  const name = "Harishbabu S";
+  const formattedName = name.split('').map((letter) => {
+    return letter === ' ' ? '\u00A0' : letter;
+  });
   return (
     <header
       id="home"
@@ -72,7 +76,12 @@ const Header = ({ Width }) => {
 
       <div className="info">
         <div className="name">
-          <h2>Harishbabu S</h2>
+          {/* <h2>Harishbabu S</h2> */}
+          {formattedName.map((letter, index) => (
+            <span key={index} className="letter" style={{ animationDelay: `${index * 0.1}s` }}>
+              {letter}
+            </span>
+          ))}
         </div>
         <p01>
           <b>Front-End Web|Mobile developer</b>
@@ -82,9 +91,11 @@ const Header = ({ Width }) => {
           <asp>
             <strong>Full stack developer</strong>
           </asp>
-          <br />
-          Also was a <b>Test Automation Engineer</b>
+          {/* <br /> */}
         </p02>
+        <p03>
+          Also was a <b>Test Automation Engineer</b>
+        </p03>
       </div>
 
       <div className="image-container">
@@ -98,14 +109,12 @@ const Header = ({ Width }) => {
       <h2 className="tech-heading">Technologies</h2>
       <div className="tech-container">
         <ul>
-          <li>HTML</li>
-          <li>CSS</li>
           <li>JavaScript</li>
           <li>React JS</li>
+          <li>Node, Express, MongoDB</li>
         </ul>
         <ul>
           <li>React Native</li>
-          <li>UI/UX</li>
           <li>Selenium</li>
           <li>Agile Methodology</li>
         </ul>

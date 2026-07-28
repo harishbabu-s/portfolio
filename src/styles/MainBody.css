@@ -1,665 +1,681 @@
 .main-body {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.main-body.light-mode {
+  .timeline {
+    background-image: url("../assets/green-day.jpg");
+  }
+
+  .bspe {
+    background-image: url("../assets//train-bspe.png");
+  }
+
+  .it {
+    background-image: url("../assets/train-it.png");
+  }
+
+  .new {
+    background-image: url("../assets/train-new.png");
+  }
+
+  .window {
+    background-color: #eeeeee70;
+  }
+
+  .window:hover {
+    background-color: #eeeeee;
+  }
+
+  .window p1 {
+    color: #03131b;
+  }
+
+  .window p2 {
+    color: #0000ff;
+  }
+  .window p3 {
+    color: black;
+  }
+
+  .projects-certificates-container {
+    background-image: url("../assets/grass-and-sand-day.png");
+  }
+  .phase-details {
+    background-image: url("../assets/grass-and-sand-phase-day.png");
+  }
+  .details-container,
+  .projects {
+    background-color: #03380b80; /* #788940 */
+  }
+  .details-container,
+  .proj-description,
+  .proj-title {
+    color: #bbbbbb;
+  }
+
+  .proj-heading,
+  .cert-heading,
+  .cert-title,
+  .timeline-heading {
+    color: #000000;
+  }
+}
+
+.main-body.dark-mode {
+  .timeline {
+    background-image: url("../assets/green-night.jpg");
+  }
+  .bspe {
+    background-image: url("../assets//train-bspe-night.png");
+  }
+
+  .it {
+    background-image: url("../assets/train-it-night.png");
+  }
+
+  .new {
+    background-image: url("../assets/train-new-night.png");
+  }
+
+  .window {
+    background-color: #33333380;
+  }
+
+  .window:hover {
+    background-color: #555555;
+  }
+
+  .window p1 {
+    color: #0080d2;
+  }
+
+  .window p2 {
+    color: #ffffff90;
+  }
+  .window p3 {
+    color: #0478c0;
+  }
+
+  .projects-certificates-container {
+    background-image: url("../assets/grass-and-sand-night.png");
+  }
+  .phase-details {
+    background-image: url("../assets/grass-and-sand-phase-night.png");
+  }
+  .details-container {
+    background-color: #03380b50; /*s #788940 */
+    opacity: 70%;
+    color: #dddddd;
+  }
+
+  .proj-heading,
+  .proj-title,
+  .cert-heading,
+  .cert-title,
+  .timeline-heading,
+  .proj-description {
+    color: #ffffff90;
+  }
+}
+
+.timeline {
+  display: flex;
+  position: relative;
+  overflow-x: auto;
+}
+
+.timeline-heading {
+  position: absolute;
+}
+
+.timeline,
+.projects-certificates-container,
+.train {
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-image 2s;
+  z-index: 1;
+}
+
+.train {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.window {
+  border: solid black;
+  cursor: pointer;
+  text-align: center;
+}
+
+p1,
+p2,
+p3 {
+  display: block;
+  font-weight: bold;
+}
+
+.window p1 {
+  font-family: "Times New Roman";
+}
+
+.window p2 {
+  font-family: Times;
+}
+
+.window p3 {
+  font-family: "Roboto";
+}
+
+.phase-details {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.details-container {
+  display: block;
+}
+
+.projects-container,
+.certificates-container {
+  display: flex;
+  overflow-x: auto;
+}
+
+.projects,
+.certificates {
+  flex: 0 0 auto;
+  align-items: flex-start;
+}
+
+.proj-heading,
+.cert-heading {
+  text-align: center;
+}
+.screenshots {
+  display: flex;
+  overflow-x: auto;
+}
+.screenshots img {
+  object-fit: cover;
+}
+
+@media (min-width: 375px) {
+  .timeline,
+  .projects-certificates-container {
+    max-width: 375px;
+  }
+  .timeline-heading {
+    left: 428px;
+    font-size: 22px;
+    margin-top: 68px;
+  }
+  .timeline,
+  .train {
+    height: 352px;
+  }
+
+  .train {
+    gap: 13.5px;
+  }
+  .bspe {
+    min-width: 541px;
+  }
+
+  .it {
+    min-width: 223px;
+  }
+
+  .new {
+    min-width: 112px;
+  }
+  .window {
+    margin-top: 153px;
+    margin-right: 14px;
+    border-radius: 10px;
+    border-width: 1px;
+    width: 82px;
+    height: 73.5px;
+    line-height: 0.8rem;
+  }
+
+  p1 {
+    margin-top: 4px;
+    font-size: 16px;
+    height: 17px;
+  }
+
+  p2 {
+    font-size: 12px;
+  }
+
+  p3 {
+    margin-top: 1px;
+    font-size: 10px;
+  }
+  .born {
+    margin-right: 102px;
+    width: 76px;
+    height: 72px;
+  }
+
+  .details-container {
+    margin: 15px;
+    padding: 15px;
+    font-size: 10px;
+  }
+
+  .projects-certificates-container {
+    height: 504px;
+  }
+  .proj-heading,
+  .cert-heading {
+    font-size: 22px;
+    margin: 0;
+  }
+
+  .projects-container,
+  .certificates-container {
+    gap: 8px;
+    padding: 2px 0 2px 0;
+    margin: 0 15px 0 15px;
+  }
+  .projects,
+  .certificates {
+    padding: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+  }
+  .proj-title {
+    font-size: 16px;
+    margin: 0 0 2px 0;
+  }
+  .projects {
+    width: 160px;
+    height: 220px;
+  }
+  .github-thumbnail {
+    width: 20px;
+    height: 20px;
+  }
+  .screenshots {
+    gap: 8px;
+    padding: 8px 0;
     width: 100%;
-    box-sizing: border-box;
-    position: relative;
-    background-size: contain;
-    background-repeat: no-repeat;
+    height: 110px;
+  }
+  .screenshots img {
+    width: auto;
+    max-height: 500px;
+    border-radius: 4px;
+  }
+  .proj-description {
+    margin-top: 4px;
+    font-size: 10px;
+  }
+
+  .certificates {
+    width: 160px;
+    height: 170px;
+  }
+  .cert-heading {
+    margin-top: 20px;
+  }
+  .cert-title {
+    font-size: 16px;
+    margin: 0 0 12px 0;
+    height: 34px;
+  }
 }
 
+@media (min-width: 768px) {
+  .timeline,
+  .projects-certificates-container {
+    max-width: 768px;
+  }
+  .timeline-heading {
+    left: 700px;
+    font-size: 40px;
+    margin-top: 110px;
+  }
+  .timeline {
+    height: 587px;
+    scrollbar-width: thin;
+  }
+  .train {
+    height: 587px;
+  }
 
-.main-body.light-mode{
+  .train {
+    gap: 22px;
+  }
+  .bspe {
+    min-width: 902px;
+  }
 
-    .timeline{
-        background-image: url('../assets/green-day.jpg');
-    }
-    
-        .bspe{
-            background-image: url('../assets//train-bspe.png');
-        }
+  .it {
+    min-width: 372px;
+  }
 
-        .it{
-            background-image: url('../assets/train-it.png');
-        }
+  .new {
+    min-width: 187px;
+  }
 
-        .new{
-            background-image: url('../assets/train-new.png');
-        }
-        
-        .window{
-            background-color: #eeeeee70;
-        }
+  .window {
+    margin-top: 255px;
+    margin-right: 24px;
+    border-radius: 15px;
+    border-width: 1px;
+    box-shadow: inset 1px 1px 1px 3px #00000050;
+    width: 137px;
+    height: 124px;
+    line-height: 1.3rem;
+  }
 
-        .window:hover{
-            background-color: #eeeeee;
-        }
+  p1 {
+    margin-top: 8px;
+    font-size: 26px;
+    height: 28px;
+  }
 
-        .window p1{
-            color: #03131b;
-        }
-        
-        .window p2{
-            color: #0000ff;
-        } 
-        .window p3{
-            color: black;
-        }
+  p2 {
+    font-size: 20px;
+  }
 
-        
-    .projects-certificates-container{
-        background-image: url("../assets/grass-and-sand-day.png");
-    }
-        .phase-details{
-            background-image: url("../assets/grass-and-sand-phase-day.png");
-        }
-        .details-container, .projects{
-            background-color:  #03380b80; /* #788940 */
-        }
-        .details-container, .proj-description, .proj-title{
-            color: #bbbbbb;
-        }
+  p3 {
+    margin-top: 4px;
+    font-size: 18px;
+  }
+  .born {
+    margin-right: 170px;
+    width: 128px;
+    height: 120px;
+  }
 
-        .proj-heading, .cert-heading, .cert-title, .timeline-heading{
-            color: #000000;
-        }
+  .details-container {
+    margin: 30px;
+    padding: 30px;
+    font-size: 18px;
+  }
+
+  .projects-certificates-container {
+    height: 910px;
+  }
+  .proj-heading,
+  .cert-heading {
+    font-size: 40px;
+    margin: 0;
+  }
+
+  .projects-container,
+  .certificates-container {
+    gap: 16px;
+    padding: 14px 0 14px 0;
+    margin: 0 30px 0 30px;
+    scrollbar-width: thin;
+  }
+  .projects,
+  .certificates {
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  }
+  .proj-title {
+    font-size: 32px;
+    margin: 0 0 8px 0;
+  }
+  .projects {
+    width: 270px;
+    height: 440px;
+  }
+  .github-thumbnail {
+    width: 40px;
+    height: 40px;
+  }
+  .screenshots {
+    gap: 8px;
+    padding: 8px 0;
+    width: 100%;
+    height: 230px;
+  }
+  .screenshots img {
+    width: auto;
+    max-height: 500px;
+    border-radius: 4px;
+  }
+  .proj-description {
+    margin-top: 12px;
+    font-size: 18px;
+  }
+
+  .certificates {
+    width: 250px;
+    height: 200px;
+  }
+  .cert-heading {
+    margin-top: 20px;
+  }
+  .cert-title {
+    font-size: 28px;
+    margin: 0 0 8px 0;
+    height: 70px;
+  }
 }
 
+@media (min-width: 1280px) {
+  .timeline,
+  .projects-certificates-container {
+    max-width: 1280px;
+  }
+  .timeline-heading {
+    left: 700px;
+    font-size: 40px;
+    margin-top: 104px;
+  }
+  .timeline {
+    height: 600px;
+    scrollbar-width: thin;
+  }
+  .details-container {
+    margin: 40px;
+    padding: 40px;
+    font-size: 30px;
+  }
+  .projects-certificates-container {
+    height: 1210px;
+  }
+  .proj-heading,
+  .cert-heading {
+    font-size: 48px;
+    margin: 0 0 0 20px;
+  }
 
-.main-body.dark-mode{
-    
-    .timeline{
-        background-image: url('../assets/green-night.jpg');
-    }
-        .bspe{
-            background-image: url('../assets//train-bspe-night.png');
-        }
-        
-        .it{
-            background-image: url('../assets/train-it-night.png');
-        }
-        
-        .new{
-            background-image: url('../assets/train-new-night.png');
-        }
+  .projects-container,
+  .certificates-container {
+    gap: 16px;
+    padding: 14px 0 14px 0;
+    margin: 0 40px 0 40px;
+    scrollbar-width: thin;
+  }
+  .projects,
+  .certificates {
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  }
+  .proj-title {
+    font-size: 32px;
+    margin: 0 0 8px 0;
+  }
+  .projects {
+    width: 350px;
+    height: 720px;
+  }
+  .github-thumbnail {
+    width: 45px;
+    height: 45px;
+  }
+  .screenshots {
+    gap: 8px;
+    padding: 8px 0;
+    width: 100%;
+    height: 420px;
+    scrollbar-width: thin;
+  }
+  .screenshots img {
+    width: auto;
+    max-height: 500px;
+    border-radius: 4px;
+  }
+  .proj-description {
+    margin-top: 12px;
+    font-size: 24px;
+  }
 
-        .window{
-            background-color: #33333380;
-        }
-
-        .window:hover{
-            background-color: #555555;
-        }
-
-        .window p1{
-            color: #0080d2;
-        }
-        
-        .window p2{
-            color: #ffffff90;
-        } 
-        .window p3{
-            color: #0478c0;
-        }
-    
-        .projects-certificates-container{
-            background-image: url("../assets/grass-and-sand-night.png");
-        }
-            .phase-details{
-                background-image: url("../assets/grass-and-sand-phase-night.png");
-            }
-            .details-container{
-                background-color: #03380b50; /*s #788940 */
-                opacity: 70%;
-                color: #dddddd;
-            }
-
-            .proj-heading, .proj-title, .cert-heading, .cert-title, .timeline-heading, .proj-description{
-                color: #ffffff90;
-            }
+  .certificates {
+    width: 250px;
+    height: 200px;
+  }
+  .cert-heading {
+    margin-top: 24px;
+  }
+  .cert-title {
+    font-size: 28px;
+    margin: 0 0 8px 0;
+    height: 70px;
+  }
 }
 
+@media (min-width: 1920px) {
+  .timeline,
+  .projects-certificates-container {
+    max-width: 1920px;
+  }
+  .timeline-heading {
+    left: 1060px;
+    font-size: 56px;
+    margin-top: 160px;
+  }
+  .timeline {
+    height: 892px;
+  }
+  .train {
+    height: 880px;
+  }
+  .bspe {
+    min-width: 1352px;
+  }
 
-    .timeline{
-        display: flex;
-    position: relative;
-    overflow-x: auto;
-    }
+  .it {
+    min-width: 558px;
+  }
 
-    .timeline-heading{
-        position: absolute;
-    }
+  .new {
+    min-width: 280px;
+  }
 
-    .timeline, .projects-certificates-container, .train{
-        background-size: cover;
-        background-repeat: no-repeat;
-        transition: background-image 2s;
-        z-index: 1;
-    }
+  .window {
+    margin-top: 384px;
+    margin-right: 34px;
+    border-radius: 25px;
+    border-width: 2px;
+    box-shadow: inset 1px 1px 1px 3px #00000050;
+    width: 208px;
+    height: 182px;
+    line-height: 1.8rem;
+  }
+  p1 {
+    margin-top: 10px;
+    font-size: 42px;
+    height: 44px;
+  }
 
-    .train{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-            .window{
-                border: solid black ;
-                cursor: pointer;
-                text-align: center;
-            }
-            
-            p1, p2, p3{
-                display: block;
-                font-weight: bold;
-            }
-            
-            .window p1{
-                font-family: 'Times New Roman';
-            }
+  p2 {
+    font-size: 26px;
+  }
 
-            .window p2{
-                font-family: Times;
-            }
+  p3 {
+    margin-top: 8px;
+    font-size: 24px;
+  }
 
-            .window p3{
-                font-family: 'Roboto';
-            }
+  .infy {
+    margin-right: 46px;
+  }
+  .puc {
+    margin-right: 44px;
+  }
+  .school {
+    margin-right: 45px;
+  }
+  .born {
+    margin-right: 262px;
+    width: 192px;
+  }
 
-    .phase-details{
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    .details-container{
-        display: block;
-    }
+  .details-container {
+    margin: 56px;
+    padding: 56px;
+    font-size: 42px;
+  }
 
-    
-    
-    .projects-container, .certificates-container{
-        display: flex;
-        overflow-x: auto;
-    }
-    
-    .projects, .certificates{
-        flex: 0 0 auto;
-        align-items: flex-start;
-        }
+  .projects-certificates-container {
+    height: 1816px;
+  }
+  .proj-heading,
+  .cert-heading {
+    font-size: 64px;
+    margin-top: 20px;
+  }
 
-        /* .github-thumbnail{
-            object-fit: cover;
-        } */
-
-        .proj-heading, .cert-heading{
-            text-align: center;
-        }
-            .screenshots {
-                display: flex;
-                overflow-x: auto;
-            }
-            .screenshots img {
-                object-fit: cover;
-            }
-
-@media (min-width:375px) {
-
-    .timeline, .projects-certificates-container{
-        max-width: 375px ;
-    }
-    .timeline-heading{
-        left: 428px;
-        font-size: 22px;
-        margin-top: 68px;
-    }
-    .timeline, .train{
-        height: 352px;
-    }
-
-    .train{
-        gap: 13.5px;
-    }
-        .bspe{
-            min-width: 541px;
-            }
-            
-            .it{
-                min-width: 223px;
-            }
-
-            .new{
-                min-width: 112px;
-            }
-            .window{
-                margin-top: 153px;
-                margin-right: 14px;
-                border-radius: 10px;
-                    border-width: 1px;
-                    width: 82px;
-                    height: 73.5px;
-                    line-height: 0.8rem;
-                }
-
-                p1{
-                    margin-top: 4px;
-                    font-size: 16px;
-                    height: 17px;
-                }
-                
-                p2{
-                    font-size: 12px;
-                }
-                
-                p3{
-                    margin-top: 1px;
-                    font-size: 10px;
-                }
-                    .born{
-                        margin-right: 102px;
-                        width: 76px;
-                        height: 72px;
-                    }
-                    
-    .details-container{
-        margin: 15px;
-        padding: 15px;
-        font-size: 10px;
-    }
-    
-    .projects-certificates-container{
-        height: 504px;
-    }
-    .proj-heading, .cert-heading {
-        font-size: 22px;
-        margin: 0;
-    }
-
-    .projects-container, .certificates-container{
-        gap: 8px;
-        padding: 2px 0 2px 0;
-        margin: 0 15px 0 15px;
-    }   
-        .projects, .certificates{
-            padding: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
-        }        
-        .proj-title{
-            font-size: 16px;
-            margin: 0 0 2px 0;
-        }
-        .projects{
-            width: 160px;
-            height: 220px;
-        }
-        .github-thumbnail{
-            width: 20px;
-            height: 20px;
-        }
-            .screenshots {
-                gap: 8px;
-                padding: 8px 0;
-                width: 100%;
-                height: 110px;
-            }
-                .screenshots img {
-                    width: auto;
-                    max-height: 500px;
-                    border-radius: 4px;
-                }
-        .proj-description{
-            margin-top: 4px;
-            font-size: 10px;
-        } 
-
-        .certificates{
-            width: 160px;
-            height: 170px;
-        }
-            .cert-heading{
-                margin-top: 20px;
-            }
-            .cert-title{
-                font-size: 16px;
-                margin: 0 0 12px 0;
-                height: 34px;
-            }
-}
-
-
-@media (min-width:768px) {
-    
-    .timeline, .projects-certificates-container{
-        max-width: 768px ;
-    }
-    .timeline-heading{
-        left: 700px;
-        font-size: 40px;
-        margin-top: 110px;
-    }
-    .timeline{
-        height: 587px;    
-        scrollbar-width: thin;
-    } 
-    .train{
-        height: 587px;
-    }
-    
-    .train{
-        gap: 22px;
-    }
-        .bspe{
-            min-width: 902px;
-        }
-        
-
-        .it{
-            min-width: 372px;
-        }
-        
-        .new{
-            min-width: 187px;
-        }
-        
-            .window{
-                margin-top: 255px;
-                margin-right: 24px;
-                border-radius: 15px;
-                border-width: 1px;
-                box-shadow: inset 1px 1px 1px 3px #00000050;
-                width: 137px;
-                height: 124px;
-                line-height: 1.3rem;
-            }
-            
-            p1{
-                margin-top: 8px;
-                font-size: 26px;
-                height: 28px;
-            }
-
-            p2{
-                font-size: 20px;
-            }
-
-            p3{
-                margin-top: 4px;
-                font-size: 18px;
-            }
-                .born{
-                    margin-right: 170px;
-                    width: 128px;
-                    height: 120px;
-                }                   
-
-                .details-container{
-                    margin: 30px;
-                    padding: 30px;
-                    font-size: 18px;
-                }
-                                
-    .projects-certificates-container{
-        height: 910px;
-    }
-    .proj-heading, .cert-heading {
-        font-size: 40px;
-        margin: 0;
-    }
-
-    .projects-container, .certificates-container{
-        gap: 16px;
-        padding: 14px 0 14px 0;
-        margin: 0 30px 0 30px;
-        scrollbar-width: thin;
-    }   
-        .projects, .certificates{
-            padding: 16px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
-        }        
-        .proj-title{
-            font-size: 32px;
-            margin: 0 0 8px 0;
-        }
-        .projects{
-            width: 270px;
-            height: 440px;
-        }
-        .github-thumbnail{
-            width: 40px;
-            height: 40px;
-        }
-            .screenshots {
-                gap: 8px;
-                padding: 8px 0;
-                width: 100%;
-                height: 230px;
-            }
-                .screenshots img {
-                    width: auto;
-                    max-height: 500px;
-                    border-radius: 4px;
-                }
-        .proj-description{
-            margin-top: 12px;
-            font-size: 18px;
-        } 
-
-        .certificates{
-            width: 250px;
-            height: 200px;
-        }
-            .cert-heading{
-                margin-top: 20px;
-            }
-            .cert-title{
-                font-size: 28px;
-                margin: 0 0 8px 0;
-                height: 70px;
-            }
-}
-
-
-@media (min-width:1280px) {
-
-    .timeline, .projects-certificates-container{
-        max-width: 1280px ;
-    }
-    .timeline-heading{
-        left: 700px;
-        font-size: 40px;
-        margin-top: 104px;
-    }
-    .timeline{
-        height: 600px;
-        scrollbar-width: thin;
-    }
-    .details-container{
-        margin: 40px;
-        padding: 40px;
-        font-size: 30px;
-    }   
-    .projects-certificates-container{
-        height: 1210px;
-    }
-    .proj-heading, .cert-heading {
-        font-size: 48px;
-        margin: 0 0 0 20px;
-    }
-
-    .projects-container, .certificates-container{
-        gap: 16px;
-        padding: 14px 0 14px 0;
-        margin: 0 40px 0 40px;
-        scrollbar-width: thin;
-    }   
-        .projects, .certificates{
-            padding: 16px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
-        }        
-        .proj-title{
-            font-size: 32px;
-            margin: 0 0 8px 0;
-        }
-        .projects{
-            width: 350px;
-            height: 720px;
-        }
-        .github-thumbnail{
-            width: 45px;
-            height: 45px;
-        }
-            .screenshots {
-                gap: 8px;
-                padding: 8px 0;
-                width: 100%;
-                height: 420px;
-                scrollbar-width: thin;
-            }
-                .screenshots img {
-                    width: auto;
-                    max-height: 500px;
-                    border-radius: 4px;
-                }
-        .proj-description{
-            margin-top: 12px;
-            font-size: 24px;
-        } 
-
-        .certificates{
-            width: 250px;
-            height: 200px;
-        }
-            .cert-heading{
-                margin-top: 24px;
-            }
-            .cert-title{
-                font-size: 28px;
-                margin: 0 0 8px 0;
-                height: 70px;
-            }
-}
-
-@media (min-width:1920px) {
-
-    .timeline, .projects-certificates-container{
-        max-width: 1920px ;
-    }
-    .timeline-heading{
-        left: 1060px;
-        font-size: 56px;
-        margin-top: 160px;
-    }
-        .timeline{
-            height: 892px;
-        }
-        .train{
-            height: 880px;
-        }        
-        .bspe{
-                min-width: 1352px;
-            }
-            
-            .it{
-                min-width: 558px;
-            }
-            
-            .new{
-                min-width: 280px;
-            }
-            
-            .window{
-                    margin-top: 384px;
-                    margin-right: 34px;
-                    border-radius: 25px;
-                    border-width: 2px;
-                    box-shadow: inset 1px 1px 1px 3px #00000050;
-                    width: 208px;
-                    height: 182px;
-                    line-height: 1.8rem;
-                }
-                    p1{
-                        margin-top: 10px;
-                        font-size: 42px;
-                        height: 44px;
-                    }
-
-                    p2{
-                        font-size: 26px;
-                    }
-
-                    p3{
-                        margin-top: 8px;
-                        font-size: 24px;
-                    }
-
-                    .infy{
-                        margin-right: 46px;
-                    }
-                    .puc{
-                        margin-right: 44px;
-                    }
-                    .school{
-                        margin-right: 45px;
-                    }
-                    .born{
-                        margin-right: 262px;
-                        width: 192px;
-                    }
-                    
-                    
-                    .details-container{
-                        margin: 56px;
-                        padding: 56px;
-                        font-size: 42px;
-                    }
-        
-        .projects-certificates-container{
-            height: 1816px;
-        }
-        .proj-heading, .cert-heading {
-            font-size: 64px;
-            margin-top: 20px;
-        }
-        
-        .projects-container, .certificates-container{
-                gap: 24px;
-                padding: 24px 0 24px 0;
-                margin: 0 56px 0 56px;
-            }   
-            .projects, .certificates{
-                padding: 16px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
-            }
-            .proj-title, .cert-title{
-                font-size: 42px;
-                margin: 0 0 8px 0;
-            }            
-            .projects{
-                width: 570px;
-                height: 1150px;
-            }
-            .github-thumbnail{
-                width: 60px;
-                height: 60px;
-            }
-                .screenshots {
-                    gap: 8px;
-                    padding: 8px 0;
-                    width: 100%;
-                    height: 740px;
-                }
-                .screenshots img {
-                        width: auto;
-                        max-height: 740px;
-                        border-radius: 4px;
-                    }
-                .proj-description{
-                    margin-top: 12px;
-                    font-size: 36px;
-                }         
-                .certificates{
-                    width: 400px;
-                    height: 280px;
-                }
-                .cert-title{
-                    height: 100px;
-                    margin-bottom: 30px;
-                }
+  .projects-container,
+  .certificates-container {
+    gap: 24px;
+    padding: 24px 0 24px 0;
+    margin: 0 56px 0 56px;
+  }
+  .projects,
+  .certificates {
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  }
+  .proj-title,
+  .cert-title {
+    font-size: 42px;
+    margin: 0 0 8px 0;
+  }
+  .projects {
+    width: 570px;
+    height: 1150px;
+  }
+  .github-thumbnail {
+    width: 60px;
+    height: 60px;
+  }
+  .screenshots {
+    gap: 8px;
+    padding: 8px 0;
+    width: 100%;
+    height: 740px;
+  }
+  .screenshots img {
+    width: auto;
+    max-height: 740px;
+    border-radius: 4px;
+  }
+  .proj-description {
+    margin-top: 12px;
+    font-size: 36px;
+  }
+  .certificates {
+    width: 400px;
+    height: 280px;
+  }
+  .cert-title {
+    height: 100px;
+    margin-bottom: 30px;
+  }
 }
