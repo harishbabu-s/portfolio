@@ -17,12 +17,12 @@
     background-image: url("../assets//train-bspe.png");
   }
 
-  .it {
-    background-image: url("../assets/train-it.png");
+  .two {
+    background-image: url("../assets/train-two.png");
   }
 
-  .new {
-    background-image: url("../assets/train-new.png");
+  .one {
+    background-image: url("../assets/train-one.png");
   }
 
   .window {
@@ -38,7 +38,7 @@
   }
 
   .window p2 {
-    color: #0000ff;
+    color: #040875;
   }
   .window p3 {
     color: black;
@@ -76,12 +76,12 @@
     background-image: url("../assets//train-bspe-night.png");
   }
 
-  .it {
-    background-image: url("../assets/train-it-night.png");
+  .two {
+    background-image: url("../assets/train-two-night.png");
   }
 
-  .new {
-    background-image: url("../assets/train-new-night.png");
+  .one {
+    background-image: url("../assets/train-one-night.png");
   }
 
   .window {
@@ -228,11 +228,11 @@ p3 {
     min-width: 541px;
   }
 
-  .it {
+  .two {
     min-width: 223px;
   }
 
-  .new {
+  .one {
     min-width: 112px;
   }
   .window {
@@ -358,11 +358,11 @@ p3 {
     min-width: 902px;
   }
 
-  .it {
+  .two {
     min-width: 372px;
   }
 
-  .new {
+  .one {
     min-width: 187px;
   }
 
@@ -569,11 +569,11 @@ p3 {
     min-width: 1352px;
   }
 
-  .it {
+  .two {
     min-width: 558px;
   }
 
-  .new {
+  .one {
     min-width: 280px;
   }
 
@@ -602,7 +602,7 @@ p3 {
     font-size: 24px;
   }
 
-  .infy {
+  .two-one {
     margin-right: 46px;
   }
   .puc {
